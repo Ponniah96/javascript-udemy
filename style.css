@@ -1,0 +1,228 @@
+*{
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+body{
+  font-size: 1.6rem; /* 16px */                               
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1000px; /* Centering the content */
+}
+img{
+  width: 100%;
+  height: auto;
+}
+
+/*** Carousel Styles ***/
+.carousel-container{
+    display: flex;
+    gap: 16px;
+    margin: 16px auto;
+    width: 95%;
+    overflow-x: auto;
+    /* Smooth Scrolling effect */
+    scroll-behavior: smooth; 
+    /* New way of positioning */
+    /* anchor-name: --carousel; */
+    /* Scroll start position changes */
+    scroll-snap-type: x mandatory;
+    /* Number of slides shown at the bottom */
+    scroll-marker-group: after;
+}
+
+.carousel-container::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel-container::scroll-button(left),
+.carousel-container::scroll-button(right){
+    background-color: grey;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 32px;
+    position: fixed;
+    /* position-anchor: --carousel; */
+}
+
+.carousel-container::scroll-button(left){
+    content: "←";
+    position-area: left center;
+    translate: 75%;
+}
+.carousel-container::scroll-button(right){
+    content: "→";
+    position-area: right center;
+    translate: -75%;
+}
+
+.carousel-container::scroll-button(left):disabled,
+.carousel-container::scroll-button(right):disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-container::scroll-marker-group{
+    display: flex;
+    margin: 25px 0;
+    gap: 16px;
+    justify-content: center;
+}
+
+.carousel-elements{
+    scroll-snap-align: start;
+}
+
+.carousel-elements::scroll-marker{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.carousel-elements::scroll-marker:target-current{
+    background-color: gray;
+}
+
+.carousel-container img{
+    max-width: 100%;
+    height: auto;
+}
+
+/** Different Anchors for Different Carousels **/
+.carousel-container--1{
+  anchor-name: --carousel-1;
+}
+.carousel-container--1::scroll-button(left),
+.carousel-container--1::scroll-button(right){
+    position-anchor: --carousel-1;
+}
+
+.carousel-container--2{
+  anchor-name: --carousel-2;
+}
+.carousel-container--2::scroll-button(left),
+.carousel-container--2::scroll-button(right){
+    position-anchor: --carousel-2;
+}
+
+.carousel-container--3{
+  anchor-name: --carousel-3;
+}
+.carousel-container--3::scroll-button(left),
+.carousel-container--3::scroll-button(right){
+    position-anchor: --carousel-3;
+}
+
+.carousel-container--4{
+  anchor-name: --carousel-4;
+}
+.carousel-container--4::scroll-button(left),
+.carousel-container--4::scroll-button(right){
+    position-anchor: --carousel-4;
+}
+
+.carousel-container--5{
+  anchor-name: --carousel-5;
+}
+.carousel-container--5::scroll-button(left),
+.carousel-container--5::scroll-button(right){
+    position-anchor: --carousel-5;
+}
+
+.carousel-container--6{
+  anchor-name: --carousel-6;
+}
+.carousel-container--6::scroll-button(left),
+.carousel-container--6::scroll-button(right){
+    position-anchor: --carousel-6;
+}
+
+.carousel-container--6{
+  anchor-name: --carousel-6;
+}
+.carousel-container--6::scroll-button(left),
+.carousel-container--6::scroll-button(right){
+    position-anchor: --carousel-6;
+}
+
+.carousel-container--7{
+  anchor-name: --carousel-7;
+}
+.carousel-container--7::scroll-button(left),
+.carousel-container--7::scroll-button(right){
+    position-anchor: --carousel-7;
+}
+
+.carousel-container--8{
+  anchor-name: --carousel-8;
+}
+.carousel-container--8::scroll-button(left),
+.carousel-container--8::scroll-button(right){
+    position-anchor: --carousel-8;
+}
+
+.carousel-container--9{
+  anchor-name: --carousel-9;
+}
+.carousel-container--9::scroll-button(left),
+.carousel-container--9::scroll-button(right){
+    position-anchor: --carousel-9;
+}
+
+.carousel-container--10{
+  anchor-name: --carousel-10;
+}
+.carousel-container--10::scroll-button(left),
+.carousel-container--10::scroll-button(right){
+    position-anchor: --carousel-10;
+}
+
+.carousel-container--11{
+  anchor-name: --carousel-11;
+}
+.carousel-container--11::scroll-button(left),
+.carousel-container--11::scroll-button(right){
+    position-anchor: --carousel-11;
+}
+
+.carousel-container--12{
+  anchor-name: --carousel-12;
+}
+.carousel-container--12::scroll-button(left),
+.carousel-container--12::scroll-button(right){
+    position-anchor: --carousel-12;
+}
+
+.carousel-container--13{
+  anchor-name: --carousel-13;
+}
+.carousel-container--13::scroll-button(left),
+.carousel-container--13::scroll-button(right){
+    position-anchor: --carousel-13;
+}
+
+.carousel-container--14{
+  anchor-name: --carousel-14;
+}
+.carousel-container--14::scroll-button(left),
+.carousel-container--14::scroll-button(right){
+    position-anchor: --carousel-14;
+}
+
+.carousel-container--15{
+  anchor-name: --carousel-15;
+}
+.carousel-container--15::scroll-button(left),
+.carousel-container--15::scroll-button(right){
+    position-anchor: --carousel-15;
+}
