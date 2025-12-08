@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Fundamentals – Part 2</title>
+    <title>JavaScript Fundamentals – Part 1</title>
     <style>
       body {
         height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(to top left, #28b487, #7dd56f);
+        /* display: flex;
+        align-items: center; */
+        background: linear-gradient(to right, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,12 +20,175 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
+      }
+      .content {
+        max-width: 1000px;
+        margin: auto;
       }
     </style>
   </head>
   <body>
-    <h1>JavaScript Fundamentals – Part 2</h1>
+    <section class="content">
+
+      <h1>JavaScript Fundamentals – Part 2</h1>
+
+      <h2>use Strict</h2>
+      <p>
+        "use strict" is a directive that enables strict mode in JavaScript,
+        which helps catch common coding mistakes and unsafe actions. It enforces
+        stricter parsing and error handling, making the code more secure and
+        less error-prone.
+      </p>
+  
+      <hr>
+
+      <h2>Functions</h2>
+      <p>
+        Functions are reusable blocks of code that perform a specific task. They
+        can take inputs (parameters) and return outputs (return values). Functions
+        help organize code, improve readability, and promote code reuse.
+      </p>
+
+      <h3>Function declaration</h3>
+      <p>A function declaration defines a named function that can be called anywhere in the scope.</p>
+      <pre><code>function greet(name) {
+  return 'Hello, ' + name + '!';
+}</code></pre>
+
+      <h3>Function expression</h3>
+      <p>A function expression defines a function as part of an expression and can be assigned to a variable. It is not hoisted, so it can only be called after it is defined.</p>  
+      <pre><code>const greet = function(name) {
+  return 'Hello, ' + name + '!';
+};</code></pre>
+
+      <h3>Arrow function</h3>
+      <p>An arrow function is a concise syntax for writing functions using the "=>" syntax. It does not have its own "this" context and is often used for shorter functions.</p>
+      <pre><code>const greet = (name) => {
+  return 'Hello, ' + name + '!';
+};</code></pre>
+
+      <h3>Function calling Inside another function</h3>
+      <p>Functions can be called inside other functions to perform complex tasks by combining simpler functions.</p>
+      <p>Functions are called by using their name followed by parentheses, optionally passing arguments.</p>
+      <pre><code>const message = greet('Alice');
+console.log(message); // Output: Hello, Alice!</code></pre>
+
+      <h3>Reviewing Functions</h3>
+      <p>This section reviews different ways to define and use functions, including function declarations, expressions, and arrow functions. It also demonstrates calling functions within other functions and handling conditional logic inside functions.</p>
+      
+
+      <hr>
+
+      <h2>Arrays</h2>
+      <p>
+        An array is a data structure that can hold multiple values in a single
+        variable. 
+      </p>
+      <p>
+        Arrays are ordered collections of items, and each item can be
+          accessed using its index (position) in the array. 
+      </p>
+       <p> Arrays are useful for
+        storing lists of related data.
+      </p>
+      <p>Array can store multiple data types including numbers, strings, objects,expression, function calls and even other arrays.</p>
+
+      <h3>Array Basic Methods</h3>
+      <ul>
+        <li><strong>push()</strong>: Adds one or more elements to the end of an array and returns the new length of the array.</li>
+        <li><strong>pop()</strong>: Removes the last element from an array and returns that element.</li>
+        <li><strong>shift()</strong>: Removes the first element from an array and returns that element.</li>
+        <li><strong>unshift()</strong>: Adds one or more elements to the beginning of an array and returns the new length of the array.</li>
+        <li><strong>indexOf()</strong>: Returns the first index at which a given element can be found in the array, or -1 if it is not present.</li>
+        <li><strong>slice()</strong>: Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).</li>
+        <li><strong>splice()</strong>: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</li>
+        <li><strong>forEach()</strong>: Executes a provided function once for each array element.</li>
+      </ul>
+
+      <hr>
+      <h2>Objects</h2>
+      <p>
+        An object is a collection of key-value pairs, where each key (also
+        called a property) is a string and the value can be any data type,
+        including other objects or functions.
+      </p>
+      <p>
+        Objects are used to represent real-world entities and their
+        characteristics.
+      </p>
+      <h3>Difference between Dot and Bracket Notation</h3>
+      <p>
+        Dot notation is used to access object properties using a dot (.) followed
+        by the property name.
+      </p>
+      <p>
+       Bracket notation uses square brackets ([]) and
+        allows for dynamic property access using a string or variable or even expressions.
+      </p>
+      <h3>Object Basic Methods</h3>
+      <ul>
+        <li><strong>Object.keys()</strong>: Returns an array of a given object's own property names.</li>
+        <li><strong>Object.values()</strong>: Returns an array of a given object's own enumerable property values.</li>
+        <li><strong>Object.entries()</strong>: Returns an array of a given object's own enumerable string-keyed property [key, value] pairs.</li>
+        <li><strong>hasOwnProperty()</strong>: Returns a boolean indicating whether the object has the specified property as its own property.</li>
+        <li><strong>delete</strong>: Removes a property from an object.</li>
+      </ul> 
+
+
+      <hr>
+
+      <h2>For loop</h2>
+      <p>
+        A for loop is a control flow statement that allows code to be executed
+        repeatedly based on a condition. It consists of three main parts: the
+        initialization, the condition, and the increment/decrement.
+      </p>
+      <p>
+        The for loop is commonly used for iterating over arrays or performing a
+        specific number of iterations.
+      </p>
+      <h3>For loop Example</h3>
+      <pre><code>for (let i = 0; i &lt; 5; i++) {
+  console.log(i);
+}</code></pre>  
+
+      <h3>Looping Arrays</h3>
+      <p>Looping Arrays using for loop allows you to iterate over each element in the array and perform operations on them.</p>
+
+      <h3>Continue</h3>
+      <p>The continue statement is used to skip the current iteration of a loop and move to the next iteration.</p> 
+
+      <h3>Break</h3>
+      <p>The break statement is used to exit a loop prematurely when a certain condition is met
+
+
+      <h3>While Loop</h3>
+      <p>
+        A while loop is a control flow statement that repeatedly executes a block
+        of code as long as a specified condition is true.
+      </p>
+      <p>
+        The loop continues until the condition evaluates to false.
+      </p>
+      <p>Real time scenario where we need to use while loop instead of for loop: When the number of iterations is not known beforehand and depends on a condition that is checked during each iteration.</p>
+      <h3>Do...While Loop</h3>
+      <p>
+        A do...while loop is similar to a while loop, but it guarantees that the
+        code block will be executed at least once before checking the condition.
+      </p>
+      <p>
+        The loop continues until the condition evaluates to false.
+      </p>
+
+
+      <hr>
+
+      <h2>Section Summary</h2>
+      <iframe src="./section-03-summary.pdf" frameborder="0" width="100%" height="600" style="margin-bottom: 10rem;"></iframe>
+     
+    </section>
     <script src="script.js"></script>
+    <!-- <script src="assignment.js"></script>
+    <script src="codingChallenge.js"></script> -->
   </body>
 </html>

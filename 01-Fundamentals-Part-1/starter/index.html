@@ -8,9 +8,10 @@
     <style>
       body {
         height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(to top left, #28b487, #7dd56f);
+        /* display: flex;
+        align-items: center; */
+        background: linear-gradient(to right, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,11 +20,186 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
+      }
+      .content {
+        max-width: 1000px;
+        margin: auto;
       }
     </style>
   </head>
   <body>
-    <h1>JavaScript Fundamentals – Part 1</h1>
+    <section class="content">
+
+      <h1>JavaScript Fundamentals – Part 1</h1>
+  
+      <h2>Values and Variables</h2>
+  
+      <h3>Variables</h3>
+      <p>variables are used to store data values in JavaScript.</p>
+  
+      <h3>naming convention while calling variables</h3>
+      <ul>
+        <li>cannot start with number</li>
+        <li>cannot contain space or hyphen (-)</li>
+        <li>cannot be a reserved keyword (new, class, etc.)</li>
+        <li>use camelCase for multiple words</li>
+      </ul>
+  
+      <hr>
+  
+      <h2>Primitive Data Types</h2>
+      <ul>
+        <li>Number: integer and decimal numbers (e.g., 23, 23.5)</li>
+        <li>String: sequence of characters enclosed in quotes (e.g., 'Hello')</li>
+        <li>Boolean: true or false values</li>
+        <li>Undefined: variable declared but not assigned a value</li>
+        <li>Null: represents an intentional absence of any object value</li>
+        <li>Symbol: unique and immutable data type used as identifiers for object properties</li>
+        <li>BigInt: represents integers with arbitrary precision (e.g., 9007199254741991n)</li>
+      </ul>
+      <br>
+      <h3>Dynamic Typing</h3>
+      <p>JavaScript is a dynamically typed language, meaning you don't have to specify the data type of a variable when you declare it. The type is determined automatically based on the assigned value and can change at runtime
+      </p>
+      <br>
+      <h3>typeof Operator</h3>
+      <p>The typeof operator is used to determine the data type of a variable or value in
+  
+      <hr>
+  
+      <h3>Basics of let, var, const</h3>
+      <ul>
+        <li><strong>let</strong>: used to declare block-scoped variables that can be reassigned.</li>
+        <li><strong>const</strong>: used to declare block-scoped variables that cannot be reassigned after their initial assignment.</li>
+        <li><strong>var</strong>: function-scoped variable declaration (older way, less preferred now).</li>
+      </ul>
+
+      <hr>
+
+      <h2>Basic Operators</h2>
+      <ul>
+        <li>Arithmetic Operators: +, -, *, /, %, **</li>
+        <li>Assignment Operators: =, +=, -=, *=, /=</li>
+        <li>Comparison Operators: ==, ===, !=, !==, >, <, >=, <=</li>
+        <li>Logical Operators: && (AND), || (OR), ! (NOT)</li>
+        <li>Increment and Decrement Operators: ++, --</li>
+      </ul>
+
+      <hr>
+
+      <h2>Operator Precedence</h2>
+      <p>Operator precedence determines the order in which operators are evaluated in an expression. Operators
+      with higher precedence are evaluated before those with lower precedence. For example, multiplication (*) has higher precedence than addition (+), so in the expression 3 + 5 * 2, the multiplication is performed first, resulting in 3 + 10 = 13.</p>
+      <ul>
+        <li>Parentheses: ()</li>
+        <li>Exponentiation: **</li>
+        <li>Multiplication, Division, Modulus: *, /, %</li>
+        <li>Addition, Subtraction: +, -</li>
+        <li>Comparison Operators: <, <=, >, >=</li>
+        <li>Equality Operators: ==, ===, !=, !==</li>
+        <li>Logical AND: &&</li>
+        <li>Logical OR: ||</li>
+      </ul>
+
+      <hr>
+
+      <h2>Strings and Template Literals</h2>
+      <p>Strings are sequences of characters used to represent text in JavaScript. They can be created using single quotes (' '), double quotes (" "), or backticks (` `). Template literals, enclosed in backticks, allow for multi-line strings and embedding expressions using ${expression} syntax.</p> 
+      <h4>Template Literals</h4>
+      <p>Template literals are a way to create strings in JavaScript that allow for easier embedding of variables and expressions. They are enclosed in backticks (` `) instead of single or double quotes. Template literals support multi-line strings and expression interpolation using the ${} syntax.</p>
+      <p>Advantages of template literals</p>
+      <ul>
+        <li>Multi-line strings without the need for escape characters.</li>
+        <li>Embedding variables and expressions directly within the string.</li>
+        <li>Improved readability and maintainability of code.</li>
+      </ul>
+
+      <hr>
+
+      <h3>if else statements</h3>
+      <p>The if...else statement is a conditional statement that allows you to execute different blocks of code based on whether a specified condition is true or false. If the condition evaluates to true, the code block within the if statement is executed. If the condition is false, the code block within the else statement (if provided) is executed instead.</p>
+
+      <hr>
+
+      <h2>Type Conversion and Coercion</h2>
+      <p>Type conversion is the process of converting a value from one data type to another
+      </p>
+      <h4>Type Coercion</h4>
+      <p>Type coercion is the automatic or implicit conversion of values from one data type to another by JavaScript. This occurs when performing operations involving different data types, such as combining a string and a number.</p>
+
+      <hr>
+
+      <h2>Truthy and falsy Values</h2>
+      <p>In JavaScript, truthy and falsy values are used in conditional statements to determine the flow of execution. A truthy value is any value that is considered true when evaluated in a boolean context, while a falsy value is any value that is considered false.</p>
+      <p>Falsy values in JavaScript include:</p>
+      <ul>
+        <li>false</li>
+        <li>0 (zero)</li>
+        <li>"" (empty string)</li>
+        <li>null</li>
+        <li>undefined</li>
+      </ul>
+
+      <hr>
+
+      <h2>Equality Operators: == vs ===</h2>
+      <p>The == operator performs type coercion before comparing values, while the === operator checks for both value and type equality without coercion.</p>
+      <p>It's generally recommended to use the === operator to avoid unexpected type coercion and ensure strict equality checks.</p>
+
+
+      <hr>
+
+      <h3>Prompt</h3>
+      <p>The prompt() function is used to display a dialog box that prompts the user for input. It takes an optional string argument that serves as the message displayed in the dialog box. The function returns the user's input as a string.</p>
+      <p>Example:</p>
+      <pre><code>const userInput = prompt("Please enter your name:");
+console.log(userInput);</code></pre>
+
+      <hr>
+
+      <h2>Logical Operators</h2>
+      <p>Logical operators are used to combine multiple conditions or boolean values in JavaScript. The three main logical operators are AND (&&), OR (||), and NOT (!).</p>
+      <ul>
+        <li>AND (&&): Returns true if both operands are true.</li>
+        <li>OR (||): Returns true if at least one operand is true.</li>
+        <li>NOT (!): Returns the opposite boolean value of the operand.</li>
+      </ul>
+
+      <hr>
+
+      <h3>Switch statements</h3>
+      <p>The switch statement is a control flow statement that allows you to execute different blocks of code based on the value of a variable or expression. It is often used as an alternative to multiple if...else statements when you have several possible values to check against.</p>
+
+      <hr>
+
+      <h2>Statements and expressions </h2>
+      <h4>expression</h4>
+      <p>An expression is any valid unit of code that resolves to a value. It can be as simple as a single value or variable, or it can be a more complex combination of values, variables, and operators that produces a new value.</p>
+      
+      <h4>statement</h4>
+      <p>A statement is a complete unit of code that performs an action. Statements are made up of one or more expressions and can include control flow structures, variable declarations, function definitions, and more. Statements do not produce a value themselves but rather execute a specific task.</p> 
+
+      <hr>
+
+      <h2>Ternary operators</h2>
+      <p>The ternary operator is a concise way to write conditional statements in JavaScript. It is represented by the ? and : symbols and takes three operands: a condition, an expression to execute if the condition is true, and an expression to execute if the condition is false.</p>
+      <p>Syntax:</p>
+      <pre><code>condition ? expressionIfTrue : expressionIfFalse;</code></pre>   
+      <h4>Advantages:</h4>
+      <ul>
+        <li>Concise syntax for simple conditional statements.</li>
+        <li>Can be used within expressions, making it useful for inline conditions.</li>  
+      </ul>
+
+      <hr>
+
+      <h2>PPT for the entire section</h2>
+      <iframe src="./section-02-summary.pdf" frameborder="0" width="100%" height="600" style="margin-bottom: 10rem;"></iframe>
+
+
+    </section>
+    <script src="script.js"></script>
+    <script src="assignment.js"></script>
+    <script src="codingChallenge.js"></script>
   </body>
 </html>
