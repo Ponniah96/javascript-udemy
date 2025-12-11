@@ -19,7 +19,7 @@ logger();
 function fruitProcessor(apples, oranges) {
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
   return juice;
-} 
+}
 
 const appleJuice = fruitProcessor(5, 0);
 console.log(appleJuice);
@@ -29,7 +29,6 @@ console.log(orangeJuice);
 
 const mixedJuice = fruitProcessor(4, 2);
 console.log(mixedJuice);
-
 
 // Function Declaration vs. Expression
 console.log("---- Function Declaration vs. Expression ----");
@@ -48,11 +47,10 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1996);
 console.log(age2);
 
-
 // Arrow Functions
 console.log("---- Arrow Functions ----");
 
-const calcAge3 = birthYear => 2025 - birthYear;
+const calcAge3 = (birthYear) => 2025 - birthYear;
 const age3 = calcAge3(1996);
 console.log(age3);
 
@@ -63,7 +61,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 
 console.log(yearsUntilRetirement(1996, "Ponniah"));
-console.log(yearsUntilRetirement(1980, "Alice")); 
+console.log(yearsUntilRetirement(1980, "Alice"));
 
 // Functions Calling Other Functions
 console.log("---- Functions Calling Other Functions ----");
@@ -102,7 +100,6 @@ const yearsUntilRetirement2 = function (birthYear, firstName) {
 };
 
 console.log(yearsUntilRetirement2(1996, "Ponniah"));
-
 
 //Arrays
 
@@ -144,7 +141,7 @@ const ages = [
   calcAge4(years2[1]),
   calcAge4(years2[years2.length - 1]),
 ];
-console.log(ages);  
+console.log(ages);
 
 //Array Methods
 console.log("---- Array Methods ----");
@@ -180,7 +177,6 @@ console.log(friends2.includes(23));
 if (friends2.includes("Steven")) {
   console.log("You have a friend called Steven");
 }
-
 
 // Objects
 console.log("---- Objects ----");
@@ -231,18 +227,21 @@ const ponniah3 = {
   job: "developer",
   friends: ["Michael", "Steven", "Peter"],
   hasDriversLicense: true,
-  calcAge:  function() {
+  calcAge: function () {
     this.age = 2025 - this.birthYear;
     return this.age;
   },
-  getSummary: function() {
-    return `Hi, I'm ${this.firstName} and I'm a ${this.calcAge()} years old. I'm ${this.hasDriversLicense ? "having a" :"having not a"} driving license`
-  }
+  getSummary: function () {
+    return `Hi, I'm ${
+      this.firstName
+    } and I'm a ${this.calcAge()} years old. I'm ${
+      this.hasDriversLicense ? "having a" : "having not a"
+    } driving license`;
+  },
 };
 
 console.log(ponniah3.calcAge());
 console.log(ponniah3.getSummary());
-
 
 // for Loop
 console.log("---- for Loop ----");
@@ -297,7 +296,7 @@ for (let i = 0; i < ponniahArray.length; i++) {
   if (typeof ponniahArray[i] === "number") break;
 
   console.log(ponniahArray[i], typeof ponniahArray[i]);
-} 
+}
 
 // Looping Backwards and Loops in Loops
 console.log("---- Looping Backwards and Loops in Loops ----");
@@ -339,4 +338,3 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log("Loop is about to end...");
 }
-
