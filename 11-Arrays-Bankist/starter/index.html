@@ -119,6 +119,560 @@
       </p>
     </main>
 
+    <!-- Arrays Methods Practice -->
+    <div class="array-methods">
+      <style>
+        .array-methods {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          line-height: 1.6;
+          font-size: 16px;
+          max-width: 1000px;
+          margin: auto;
+        }
+        .array-methods h2 {
+          color: #333;
+          font-size: 24px;
+        }
+        .array-methods ul {
+          list-style-type: disc;
+          margin-left: 20px;
+        }
+        .array-methods li {
+          margin-bottom: 8px;
+        }
+      </style>
+
+      <h2>Arrays Methods Practice</h2>
+
+      <h3>Slice Method</h3>
+      <ul>
+        <li>
+          Definition: The slice() method returns a shallow copy of a portion of
+          an array into a new array object selected from start to end (end not
+          included) where start and end represent the index of items in that
+          array. The original array will not be modified.
+        </li>
+        <li>Syntax: array.slice(start, end)</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: [...array].slice(start, end)</li>
+        <li>
+          When to use slice: To create a new array by extracting a portion of an
+          existing array without modifying the original array.
+        </li>
+        <li>
+          Disadvantages: Does not modify the original array, so additional
+          memory is used for the new array
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Splice Method</h3>
+      <ul>
+        <li>
+          Definition: The splice() method changes the contents of an array by
+          removing or replacing existing elements and/or adding new elements in
+          place.
+        </li>
+        <li>Syntax: array.splice(start, deleteCount, item1, item2, ...)</li>
+        <li>Mutate origin Array: Yes</li>
+        <li>Alternate option: N/A</li>
+        <li>
+          When to use splice: To modify an existing array by adding, removing,
+          or replacing elements directly within that array.
+        </li>
+        <li>
+          Disadvantages: Mutates the original array, which can lead to
+          unexpected side effects
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Reverse Method</h3>
+      <ul>
+        <li>
+          Definition: The reverse() method reverses an array in place. The first
+          array element becomes the last, and the last array element becomes the
+          first.
+        </li>
+        <li>Syntax: array.reverse()</li>
+        <li>Mutate origin Array: Yes</li>
+        <li>Alternate option: [...array].reverse()</li>
+        <li>
+          When to use reverse: To reverse the order of elements in an array in
+          place.
+        </li>
+        <li>
+          Disadvantages: Mutates the original array, which can lead to
+          unexpected side effects
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Concat Method</h3>
+      <ul>
+        <li>
+          Definition: The concat() method is used to merge two or more arrays.
+          This method does not change the existing arrays, but instead returns a
+          new array.
+        </li>
+        <li>Syntax: array1.concat(array2, array3, ...)</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: [...array1, ...array2]</li>
+        <li>
+          When to use concat: To merge two or more arrays into a new array
+          without modifying the original arrays.
+        </li>
+        <li>
+          Disadvantages: Does not modify the original arrays, so additional
+          memory is used for the new array
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Join Method</h3>
+      <ul>
+        <li>
+          Definition: The join() method creates and returns a new string by
+          concatenating all of the elements in an array (or an array-like
+          object), separated by commas or a specified separator string.
+        </li>
+        <li>Syntax: array.join(separator)</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: N/A</li>
+        <li>
+          When to use join: To create a string from all elements in an array,
+          separated by a specified separator.
+        </li>
+        <li>
+          Disadvantages: Does not modify the original array, so additional
+          memory is used for the new string
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>At Method</h3>
+      <ul>
+        <li>
+          Definition: The at() method takes an integer value and returns the
+          item at that index, allowing for positive and negative integers.
+          Negative integers count back from the last item in the array.
+        </li>
+        <li>Syntax: array.at(index)</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: array[index]</li>
+        <li>
+          When to use at: To access an element at a specific index, including
+          negative indices for counting from the end.
+        </li>
+        <li>
+          Disadvantages: Does not modify the original array, so additional
+          memory is used for accessing elements
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>ForEach Method</h3>
+      <ul>
+        <li>
+          Definition: The forEach() method executes a provided function once for
+          each array element.
+        </li>
+        <li>Syntax: array.forEach(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop</li>
+        <li>
+          When to use forEach: To perform an action for each element in an array
+          without creating a new array(create new property inside exisitng
+          object).
+        </li>
+        <li>
+          forEach with maps and sets: Use forEach to iterate over Map and Set
+          collections, with callback parameters adapted for each.
+        </li>
+        <li>
+          Syntax: map.forEach(callback(value, key, map)) and
+          set.forEach(callback(value, value2, set))
+        </li>
+        <li>
+          Disadvantages: Cannot use break or continue statements to control the
+          loop; can only use return to exit the current iteration.
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Map Method</h3>
+      <ul>
+        <li>
+          Definition: The map() method creates a new array populated with the
+          results of calling a provided function on every element in the calling
+          array.
+        </li>
+        <li>Syntax: array.map(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop to push values into a new array</li>
+        <li>
+          When to use map: To transform each element in an array and create a
+          new array with the transformed elements.
+        </li>
+        <li>
+          Difference between Map and forEach method: map returns a new array
+          with transformed elements, forEach simply executes a function on each
+          element without returning a new array.
+        </li>
+        <li>
+          Side Effects: map should be used when you want to transform data
+          without side effects; forEach is typically used for side effects like
+          logging or updating external variables.
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Filter Method</h3>
+      <ul>
+        <li>
+          Definition: The filter() method creates a new array with all elements
+          that pass the test implemented by the provided function.
+        </li>
+        <li>Syntax: array.filter(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop to push values into a new array</li>
+        <li>
+          When to use filter: To select a subset of elements from an array based
+          on a condition.
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Reduce Method</h3>
+      <ul>
+        <li>
+          Definition: The reduce() method executes a reducer function (that you
+          provide) on each element of the array, resulting in a single output
+          value.
+        </li>
+        <li>
+          Syntax: array.reduce(callback(accumulator, currentValue, index,
+          array), initialValue) initialValue = 0 / arr[0]., then
+          currentValue=arr[1]
+        </li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop to accumulate a single value</li>
+        <li>
+          When to use reduce: To boil down an array to a single value, such as a
+          sum, product, or concatenated string.
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Array of Chain Methods</h3>
+      <ul>
+        <li>
+          Definition: Chaining array methods involves calling multiple methods
+          in a single line, where the output of one method serves as the input
+          for the next.
+        </li>
+        <li>
+          Syntax: array.method1().method2().method3()... (e.g.,
+          array.filter().map().reduce())
+        </li>
+        <li>Mutate origin Array: Depends on the methods used in the chain</li>
+        <li>
+          Alternate option: Separate method calls with intermediate variables
+        </li>
+        <li>
+          When to use chain methods: To perform multiple transformations or
+          computations on an array in a concise and readable manner.
+        </li>
+        <li>
+          Disadvantages: Can be harder to debug and may impact performance if
+          overused
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Find Method</h3>
+      <ul>
+        <li>
+          Definition: The find() method returns the value of the first element
+          in the provided array that satisfies the provided testing function.
+          Otherwise, undefined is returned.
+        </li>
+        <li>Syntax: array.find(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop with conditional return</li>
+        <li>
+          When to use find: To locate a single element in an array that meets a
+          specific condition(Useful for find objects from array of objects).
+        </li>
+        <li>
+          Disadvantages: Only returns the first matching element; subsequent
+          matches are ignored
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>FindIndex Method</h3>
+      <ul>
+        <li>
+          Definition: The findIndex() method returns the index of the first
+          element in the provided array that satisfies the provided testing
+          function. Otherwise, -1 is returned.
+        </li>
+        <li>Syntax: array.findIndex(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>
+          Alternate option: for loop with conditional return and index tracking
+        </li>
+        <li>
+          When to use findIndex: To locate the index of a single element in an
+          array that meets a specific condition.
+        </li>
+        <li>
+          Difference between indexOf and findIndex: indexOf returns the index of
+          the first element that matches a value, while findIndex returns the
+          index of the first element that satisfies a condition.
+        </li>
+        <li>
+          Disadvantages: Only returns the index of the first matching element;
+          subsequent matches are ignored
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>FindLast & FindLastIndex Methods</h3>
+      <ul>
+        <li>
+          Definition: The findLast() method returns the value of the last
+          element in the provided array that satisfies the provided testing
+          function. The findLastIndex() method returns the index of the last
+          element that satisfies the provided testing function.
+        </li>
+        <li>
+          Syntax: array.findLast(callback(currentValue, index, array)) and
+          array.findLastIndex(callback(currentValue, index, array))
+        </li>
+        <li>Mutate origin Array: No</li>
+        <li>
+          Alternate option: for loop iterating from end to start with
+          conditional return
+        </li>
+        <li>
+          When to use findLast & findLastIndex: To locate the last element or
+          its index in an array that meets a specific condition.
+        </li>
+        <li>
+          Disadvantages: Only returns the last matching element or its index;
+          previous matches are ignored
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Some</h3>
+      <ul>
+        <li>
+          Definition: The some() method tests whether at least one element in
+          the array passes the provided testing function.
+        </li>
+        <li>Syntax: array.some(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop with conditional return</li>
+        <li>
+          When to use some: To check if at least one element in an array meets a
+          specific condition.
+        </li>
+        <li>
+          Difference between some and includes: some() tests a condition for
+          each element, while includes() checks if a specific value exists in
+          the array.
+        </li>
+        <li>
+          Disadvantages: None significant( None Significant means no significant
+          disadvantages)
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Every Method</h3>
+      <ul>
+        <li>
+          Definition: The every() method tests whether all elements in the array
+          pass the provided testing function.
+        </li>
+        <li>Syntax: array.every(callback(currentValue, index, array))</li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop with conditional return</li>
+        <li>
+          When to use every: To check if all elements in an array meet a
+          specific condition.
+        </li>
+        <li>Disadvantages: None significant</li>
+      </ul>
+
+      <br />
+
+      <h3>Flat & FlatMap Methods</h3>
+      <ul>
+        <li>
+          Definition: The flat() method creates a new array with all sub-array
+          elements concatenated into it recursively up to the specified depth.
+          The flatMap() method first maps each element using a mapping function,
+          then flattens the result into a new array.
+        </li>
+        <li>
+          Syntax: array.flat(depth) and array.flatMap(callback(currentValue,
+          index, array))
+        </li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: for loop with recursion for flattening</li>
+        <li>
+          When to use flat & flatMap: To flatten nested arrays or to map and
+          flatten in a single step.
+        </li>
+        <li>
+          Disadvantages: flatMap only flattens one level deep; for deeper
+          flattening, use flat separately
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>Sort Method</h3>
+      <ul>
+        <li>
+          Definition: The sort() method sorts the elements of an array in place
+          and returns the sorted array.
+        </li>
+        <li>Syntax: array.sort(compareFunction)</li>
+        <li>
+          SortNum: Sort numbers in ascending order definition- If result is
+          negative, a is before b. If result is positive, b is before a.
+        </li>
+        <li>Mutate origin Array: Yes</li>
+        <li>Alternate option: [...array].sort(compareFunction)</li>
+        <li>
+          When to use sort: To arrange the elements of an array in a specific
+          order (ascending or descending).
+        </li>
+        <li>
+          Disadvantages: Mutates the original array, which can lead to
+          unexpected side effects
+        </li>
+      </ul>
+      <br />
+
+      <h3>Group By Arrays</h3>
+      <ul>
+        <li>
+          Definition: groupBy Array Methods is new feature introduced in ES2024
+        </li>
+        <li>
+          Syntax: Object.groupBy(array, callback(currentValue, index, array))
+        </li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: N/A</li>
+        <li>
+          When to use groupBy: To group elements of an array based on a specific
+          criterion.
+        </li>
+        <li>Disadvantages: None significant</li>
+      </ul>
+
+      <br />
+
+      <h3>Ways to Create Arrays</h3>
+      <ul>
+        <li>Array Literal: const arr = [1, 2, 3];</li>
+        <li>Array Constructor: const arr = new Array(1, 2, 3);</li>
+        <li>Array(3): const arr = Array(3); => arr[empty,empty,empty]</li>
+        <li>Array fill: const arr = Array(3).fill(0); // [0, 0, 0]</li>
+        <li>
+          Array.from(): const arr = Array.from('123'); // ['1', '2', '3'].
+          Definition: Creates an array from an iterable object.
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>
+        Non Destructive Array Alternatives Methods: toReversed(), toSpliced(),
+        toSorted(), with()
+      </h3>
+      <ul>
+        <li>
+          Definition: These methods create a new array with the desired changes
+          without modifying the original array.
+        </li>
+        <li>
+          Syntax: array.toReversed(), array.toSpliced(), array.toSorted(),
+          array.with(index, value)
+        </li>
+        <li>
+          Array with mainly used to change array value based on index i.e:
+          arr[0]='Hi')
+        </li>
+        <li>Mutate origin Array: No</li>
+        <li>Alternate option: N/A</li>
+        <li>
+          When to use Non Destructive Array Alternatives Methods: When you want
+          to make changes to an array without affecting the original array.
+        </li>
+        <li>Disadvantages: None significant</li>
+      </ul>
+    </div>
+
+    <br />
+
+    <h2>Summary</h2>
+    <div class="array-methods">
+      <ul>
+        <li>
+          Array methods are powerful tools for manipulating and transforming
+          arrays in JavaScript.
+        </li>
+        <li>
+          Understanding when and how to use each method is crucial for writing
+          efficient and readable code.
+        </li>
+        <li>
+          Always consider whether a method mutates the original array or returns
+          a new one, as this can impact your program's behavior.
+        </li>
+        <li>
+          Practice using these methods in various scenarios to become more
+          comfortable with their applications.
+        </li>
+        <li>
+          Refer to the official documentation for more details and examples on
+          each method.
+        </li>
+        <li>Happy coding and exploring the world of arrays in JavaScript!</li>
+        <li>
+          Array methods: slice(), splice(), sort(), reverse(), fill(), map(),
+          filter(), reduce()
+        </li>
+        <li>
+          Advanced Array Methods: groupBy(), toReversed(), toSpliced(),
+          toSorted(), with()
+        </li>
+      </ul>
+    </div>
+
     <!-- <footer>
       &copy; by Jonas Schmedtmann. Don't claim as your own :)
     </footer> -->

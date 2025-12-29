@@ -17,13 +17,31 @@
     <h2>Topics discussed</h2>
     <ul>
       <li><a href="#js-introduction">JS Introduction</a></li>
-      <li><a href="#js-fundamentals-1">JS Funadamentals Part 1</a></li>
-      <li><a href="#js-fundamentals-2">JS Funadamentals Part 2</a></li>
-      <!-- <li><a href="#sass-npm">NPM and SASS</a></li>
-    <li><a href="#css-layouts">CSS Layouts</a></li>
-    <li><a href="#css-flexbox">CSS Flexbox</a></li>
-    <li><a href="#css-grid">CSS Grid</a></li>
-    <li><a href="#css-responsive-design-principles">CSS Responsive Design Principles</a> (<a href="#responsive-image">Responsive image</a>)</li> -->
+      <li><a href="#js-fundamentals-1">JS Fundamentals Part 1</a></li>
+      <li><a href="#js-fundamentals-2">JS Fundamentals Part 2</a></li>
+      <li><a href="#developer-skills">Developer Skills</a></li>
+      <li><a href="#html-css-crash-course">HTML & CSS Crash Course</a></li>
+      <li>
+        <a href="#javascript-in-browser-dom-and-events"
+          >JavaScript in Browser: DOM and Events</a
+        >
+      </li>
+      <li>
+        <a href="#how-javascript-works-behind-the-scenes"
+          >How JavaScript Works Behind the Scenes</a
+        >
+      </li>
+      <li>
+        <a href="#data-structures-and-modern-operators"
+          >Data Structures and Modern Operators</a
+        >
+      </li>
+      <li>
+        <a href="#a-closer-look-at-functions">A closer look at functions</a>
+      </li>
+      <li>
+        <a href="#javascript-arrays">JavaScript Arrays</a>
+      </li>
     </ul>
 
     <!-- <h2>Projects</h2>
@@ -106,7 +124,7 @@
     </div>
 
     <h2 id="js-fundamentals-1">
-      JS Funadamentals Part 1
+      JS Fundamentals Part 1
       <a
         href="./01-Fundamentals-Part-1/starter/index.html"
         target="_blank"
@@ -264,7 +282,7 @@
       />
     </div>
 
-    <h2>
+    <h2 id="developer-skills">
       Developer Skills
       <a href="./03-Developer-Skills/starter/index.html">Learn More</a>
     </h2>
@@ -369,7 +387,7 @@
       />
     </div>
 
-    <h2>
+    <h2 id="html-css-crash-course">
       HTML & CSS Crash Course
       <a href="./04-HTML-CSS/final/index.html">Know More</a>
     </h2>
@@ -392,7 +410,9 @@
       />
     </div>
 
-    <h2>JavaScript in Browser: DOM and Events</h2>
+    <h2 id="javascript-in-browser-dom-and-events">
+      JavaScript in Browser: DOM and Events
+    </h2>
     <h3>Section Overview</h3>
 
     <h3>DOM Basics</h3>
@@ -414,44 +434,6 @@
         DOM manipulation involves changing the content, attributes, styles, and
         structure of HTML elements using JavaScript.
       </li>
-    </ul>
-
-    <h3>
-      Project 1: Guess My Number
-      <a href="./05-Guess-My-Number/starter/index.html">Learn More</a>
-    </h3>
-    <p>Important Points</p>
-    <ul>
-      <li>
-        Calling init function inside click listeners
-        <pre><code>btnNew.addEventListener('click', init);</code></pre>
-      </li>
-      <li>
-        Difference between calling function name vs calling function with
-        parentheses
-        <pre><code>btnCheck.addEventListener('click', checkNumber); // correct</code></pre>
-        <pre><code>btnCheck.addEventListener('click', checkNumber()); // incorrect(It will load function initally also)</code></pre>
-      </li>
-    </ul>
-
-    <h3>
-      Project 2: Modal Window
-      <a href="./06-Modal/starter/index.html">Learn More</a>
-    </h3>
-    <p>Important Points</p>
-    <ul>
-      <li>Difference between querySelector and getElementByClassName</li>
-    </ul>
-
-    <h3>
-      Project 3: Pig Game
-      <a href="./07-Pig-Game/starter/index.html">Learn More</a>
-    </h3>
-    <p>Important points:</p>
-    <ul>
-      <li>Init Functions, DRY principles, and DOM manipulation</li>
-      <li>Logical Thinking</li>
-      <li>Write Place to use toggle</li>
     </ul>
 
     <h3>Important Video & Screenshots</h3>
@@ -494,6 +476,302 @@
       />
       <img
         src="./00-images/javascript-34.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h3>
+      Project 1: Guess My Number
+      <a href="./05-Guess-My-Number/starter/index.html">Learn More</a>
+    </h3>
+    <p>Important Points</p>
+    <ul>
+      <li>
+        Calling init function inside click listeners
+        <pre><code>btnNew.addEventListener('click', init);</code></pre>
+      </li>
+      <li>
+        Difference between calling function name vs calling function with
+        parentheses
+        <pre><code>btnCheck.addEventListener('click', checkNumber); // correct</code></pre>
+        <pre><code>btnCheck.addEventListener('click', checkNumber()); // incorrect(It will load function initally also)</code></pre>
+      </li>
+    </ul>
+
+    <h3>
+      Project 2: Modal Window
+      <a href="./06-Modal/starter/index.html">Learn More</a>
+    </h3>
+    <p>Important Points</p>
+    <ul>
+      <li>Difference between querySelector and getElementByClassName</li>
+    </ul>
+
+    <h3>
+      Project 3: Pig Game
+      <a href="./07-Pig-Game/starter/index.html">Learn More</a>
+    </h3>
+    <p>Important points:</p>
+    <ul>
+      <li>Init Functions, DRY principles, and DOM manipulation</li>
+      <li>Logical Thinking</li>
+      <li>Write Place to use toggle</li>
+    </ul>
+
+    <h2 id="how-javascript-works-behind-the-scenes">
+      How JavaScript Works Behind the Scenes
+      <a href="./08-Behind-the-Scenes/starter/index.html">Learn More</a>
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>JavaScript is a high-level, interpreted programming language</li>
+      <li>
+        It is single-threaded but uses an event loop to handle asynchronous
+        operations
+      </li>
+      <li>
+        JavaScript engines like V8 execute JavaScript code by compiling it to
+        machine code
+      </li>
+      <li>
+        The execution context and call stack manage the order of function
+        execution
+      </li>
+      <li>Scope determines variable accessibility</li>
+      <li>
+        Hoisting allows variable and function declarations to be used before
+        they are defined
+      </li>
+      <li>
+        The this keyword refers to the context in which a function is called
+      </li>
+      <li>Memory management is handled through garbage collection</li>
+      <li>Objects are assigned and passed by reference</li>
+    </ul>
+    <div class="carousel-container carousel-container--7">
+      <img
+        src="./00-images/javascript-36.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-44.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-48.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-50.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-55.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-58.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-60.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-61.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h2 id="data-structures-and-modern-operators">
+      Data Structures and Modern Operators
+      <a href="./09-Data-Structures-Operators/starter/index.html">Learn More</a>
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>Array and Object Destructuring for extracting values.</li>
+      <li>Spread and Rest Operators for expanding and collecting elements.</li>
+      <li>
+        Short-Circuiting and Nullish Coalescing for conditional evaluations.
+      </li>
+      <li>Logical Assignment Operators for concise value assignments.</li>
+      <li>For-of Loop for iterating over iterable objects.</li>
+      <li>Enhanced Object Literals for concise object definitions.</li>
+      <li>Optional Chaining for safe property access.</li>
+      <li>Looping Object Properties using Object methods.</li>
+      <li>Sets and Maps for unique collections and key-value pairs.</li>
+      <li>String methods for manipulating text data.</li>
+    </ul>
+    <div class="carousel-container carousel-container--8">
+      <img
+        src="./00-images/javascript-70.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-71.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h2 id="a-closer-look-at-functions">
+      A closer look at functions
+      <a href="./10-Functions/starter/index.html">Learn More</a>
+    </h2>
+    <ul>
+      <li>
+        Functions are fundamental building blocks in JavaScript, allowing for
+        code reuse and modularity.
+      </li>
+      <li>
+        default paramters using es6 syntax help provide default values for
+        function parameters.
+      </li>
+      <li>
+        Passing arguments by value vs reference. Primitive data types are passed
+        by value, while objects are passed by reference. Object modifications
+        inside functions can affect the original object.
+      </li>
+      <li>
+        First-class functions treat functions as first-class citizens (i.e.,
+        variables or parguments - callbacks()), enabling higher-order functions.
+      </li>
+      <li>
+        Higher Order function: Functions take other functions as arguments or
+        return functions.
+      </li>
+      <li>Callbacks: Functions passed as arguments to other functions.</li>
+      <li>Functions can return other functions.</li>
+      <li>
+        Call and apply method: Methods to explicitly set the this keyword in
+        function calls.
+      </li>
+      <li>Bind method: Creates a new function with a bound this keyword.</li>
+      <li>
+        IIFE: Functions that are defined and immediately invoked to create a new
+        scope.
+      </li>
+      <li>
+        Closures are functions that retain access to their lexical scope
+        variables, even when executed outside that scope.
+      </li>
+      <li>
+        Mastering these concepts enhances your ability to create flexible,
+        maintainable, and efficient applications.
+      </li>
+      <li></li>
+    </ul>
+    <div class="carousel-container carousel-container--9">
+      <img
+        src="./00-images/javascript-72.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-73.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-74.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-75.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h2 id="javascript-arrays">
+      JavaScript Arrays
+      <a href="./11-Arrays-Bankist/starter/index.html">Learn More</a>
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        Arrays are ordered collections of items that can hold multiple values in
+        a single variable.
+      </li>
+      <li>
+        Common methods include push, pop, shift, unshift, slice, splice, map,
+        filter, reduce, forEach, find, some, every, and includes.
+      </li>
+      <li>
+        Array iteration methods like map, filter, reduce, and forEach allow for
+        functional programming techniques.
+      </li>
+      <li>
+        Manipulating arrays involves adding, removing, and modifying elements
+        using various methods.
+      </li>
+      <li>
+        Nested arrays (arrays within arrays) can be accessed using multiple
+        indices.
+      </li>
+      <li>
+        Advantages: Easy to use, built-in methods, dynamic sizing, and
+        versatility.
+      </li>
+      <li>Use cases: Storing lists, collections, and data structures.</li>
+      <li>
+        Important points:
+        <ul>
+          <li>
+            Difference between map and forEach: map() returns a new array with
+            transformed elements, while forEach() executes a function for each
+            element without returning a new array.
+          </li>
+          <li>
+            Difference between filter and find: filter() returns an array of all
+            elements that meet a specific condition, while find() returns the
+            first element that meets a specific condition.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--10">
+      <img
+        src="./00-images/javascript-76.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-77.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-78.png"
         alt=""
         srcset=""
         class="carousel-elements"

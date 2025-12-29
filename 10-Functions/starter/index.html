@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Closer Look at Functions</title>
+    <link rel="stylesheet" href="../../style.css" />
     <style>
       body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
+        /* height: 100vh; */
+        /* display: flex;
+        align-items: center; */
         background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,27 +21,272 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
       }
       .buy,
       .poll {
         font-size: 1.6rem;
         padding: 1rem 2rem;
-        position: absolute;
-        top: 2rem;
+        /* position: absolute;
+        top: 2rem; */
       }
-      .buy {
+      /* .buy {
         left: 2rem;
       }
       .poll {
         right: 2rem;
-      }
+      } */
     </style>
   </head>
   <body>
     <h1>A Closer Look at Functions</h1>
+
+    <h2>Function default parameters</h2>
+    <ul>
+      <li>
+        Reason for default parameters: To provide default values for function
+        parameters when no arguments are passed or when undefined is passed.
+      </li>
+      <li>Helps avoid errors and ensures functions behave predictably.</li>
+      <li>
+        How to write default parameters in es6: Use the syntax function(param =
+        defaultValue) { ... }
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Passing Arguments: Values vs. Reference</h2>
+    <ul>
+      <li>
+        Primitive data types (e.g., numbers, strings, booleans) are passed by
+        value.
+      </li>
+      <li>Objects (including arrays and functions) are passed by reference.</li>
+      <li>
+        Changes made to primitive parameters inside a function do not affect the
+        original value outside the function.
+      </li>
+      <li>
+        Changes made to object parameters inside a function
+        <b>can affect the original object outside the function.</b>
+      </li>
+      <li>
+        Note: Javascript always pass by value not doing pass by reference like
+        c, c++
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>First-Class and Higher-Order Functions</h2>
+    <ul>
+      <li>
+        First-Class Functions: Functions are treated as first-class citizens in
+        JavaScript, meaning they can be assigned to variables, passed as
+        arguments to other functions, and returned from other functions.
+      </li>
+      <li>
+        Higher-Order Functions: Functions that can take other functions as
+        arguments or return functions as their result.
+      </li>
+      <li>
+        Examples of higher-order functions include map, filter, and reduce.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Functions accepting callback functions</h2>
+    <ul>
+      <li>
+        A callback function is a function passed into another function as an
+        argument to be executed later.
+      </li>
+      <li>
+        Callbacks are commonly used for asynchronous operations, event handling,
+        and functional programming techniques.
+      </li>
+      <li>
+        Example: In array methods like map, filter, and forEach, callback
+        functions are used to process each element of the array.
+      </li>
+      <li>
+        Abstraction: Callbacks help abstract away complex logic, making code
+        more modular and easier to maintain.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Functions returning functions</h2>
+    <ul>
+      <li>
+        Functions can return other functions, allowing for the creation of
+        higher-order functions and function factories.
+      </li>
+      <li>
+        This technique is useful for creating specialized functions based on
+        certain parameters or conditions.
+      </li>
+      <li>
+        Example: A function that generates greeting functions based on a given
+        greeting message.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Call and apply methods</h2>
+    <ul>
+      <li>
+        Both call and apply are methods that allow you to invoke a function with
+        a specified this context.
+      </li>
+      <li>
+        The main difference is in how arguments are passed: call accepts a list
+        of arguments, while apply accepts an array of arguments.
+      </li>
+      <li>
+        Example:
+        <pre>
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+} 
+const person = { name: 'Alice' };
+greet.call(person, 'Hello', '!'); // Using call
+greet.apply(person, ['Hi', '!!']); // Using apply
+        </pre>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Bind Method</h2>
+    <ul>
+      <li>
+        The bind method creates a new function that, when called, has its this
+        keyword set to the provided value.
+      </li>
+      <li>
+        It allows you to create a copy of a function with a specific this
+        context and optional preset arguments.
+      </li>
+      <li>
+        Difference between call/apply and bind: call and apply invoke the
+        function immediately, while bind returns a new function with a bound
+        this context.
+      </li>
+      <li>
+        Real time scenario: Binding event handlers to maintain the correct this
+        context.
+      </li>
+      <li>
+        Example:
+        <pre>
+const person = { name: 'Bob' };
+function greet(greeting) {
+  console.log(greeting + ', ' + this.name);
+}
+const greetBob = greet.bind(person);
+greetBob('Hello'); // Output: Hello, Bob
+        </pre>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Assignment 1</h2>
     <button class="buy">Buy new plane 🛩</button>
     <button class="poll">Answer poll ⁉️</button>
+
+    <hr />
+
+    <h2>Immediately Invoked Function Expressions (IIFE)</h2>
+    <ul>
+      <li>
+        An IIFE is a function that is defined and immediately executed after its
+        creation.
+      </li>
+      <li>
+        It is commonly used to create a new scope and avoid polluting the global
+        namespace.
+      </li>
+      <li>Syntax: (function() { ... })(); or (() => { ... })();</li>
+      <li>
+        Example:
+        <pre>
+(function() {
+  const message = 'Hello, World!';
+  console.log(message);
+})();
+        </pre>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Closures</h2>
+    <ul>
+      <li>
+        Closure is closed over variables environment in which functions was
+        created even after its execution context is gone.
+      </li>
+      <li>
+        A closure is a function that retains access to its lexical scope, even
+        when the function is executed outside that scope.
+      </li>
+      <li>
+        Closures are created whenever a function is defined inside another
+        function.
+      </li>
+      <li>
+        They are useful for
+        <b
+          >data privacy, creating function factories, and maintaining state in
+          asynchronous code.</b
+        >
+      </li>
+      <li>
+        Real Time Scenario for Closures: Maintaining state in asynchronous code,
+        Timers(setTimeout, setInterval)
+      </li>
+      <li>
+        Example:
+        <pre>
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+} 
+const counter = outer();
+counter(); // Output: 1
+counter(); // Output: 2
+        </pre>
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--7">
+      <img
+        src="../../00-images/javascript-73.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-74.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-75.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

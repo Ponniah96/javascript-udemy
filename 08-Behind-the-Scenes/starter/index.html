@@ -7,10 +7,11 @@
     <title>How JavaScript Works Behind the Scenes</title>
     <style>
       body {
-        height: 100vh;
+        /* height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: center; */
         background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,12 +20,442 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
       }
     </style>
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
     <h1>How JavaScript Works Behind the Scenes</h1>
+
+    <h2>Section Overview:</h2>
+    <h3>
+      JavaScript Complete definition --> Javascript Runtime (JavaScript Engine-
+      v8, Web API, Callback Queue) --> JavaScript Engine (Call Stack & Heap) -->
+      CallStack --> Execution Context --> Variable Environment (Hoisting & TDZ)
+      --> Scope (let, const, var, Global, function, block, variable lookback)
+      --> ths keyword (Global-window, function-undefined, arrow
+      function-immediate parent scope, object-object, object method inside arrow
+      functions works) --> Heap / Memory lifecycle (allocate, use, remove) -->
+      Allocate memory (primitive- call stack, objects - heap) --> Object
+      reference (assign, spread operator, sturctureClone) --> Garabage
+      collection (call stcak - remove when execution context gone, heap - mark &
+      Sweep algoithm, overcome memory leaks)
+    </h3>
+
+    <h2>JavaScript Concepts in Detail</h2>
+    <ul>
+      <li>High Level</li>
+      <li>Garbage Collection</li>
+      <li>Interpreted or just in Time (JIT) Compilation</li>
+      <li>Multi Paradigm</li>
+      <li>Prototype-based object orientation</li>
+      <li>First-class functions</li>
+      <li>Single Threaded</li>
+      <li>Non-blocking Event Loop</li>
+      <li>Dynamic</li>
+    </ul>
+    <div class="carousel-container carousel-container--7">
+      <img
+        src="../../00-images/javascript-35.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-36.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-37.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-38.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-39.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-40.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-41.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-42.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-43.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>JavaScript Engine and Runtime</h2>
+    <ul>
+      <li>JavaScript Engine: V8, SpiderMonkey, JavaScriptCore, Chakra</li>
+      <li>JavaScript Runtime Environment: Browser and Node.js</li>
+      <li>Call Stack</li>
+      <li>Web APIs</li>
+      <li>Callback Queue</li>
+      <li>Event Loop</li>
+      <li>
+        AST: Abstract Syntax Tree is a tree representation of the abstract
+        syntactic structure of source code.
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--8">
+      <img
+        src="../../00-images/javascript-44.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-45.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-46.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-47.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-48.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>JavaScript Execution Context and Callstack in detail</h2>
+    <ul>
+      <li>Global Execution Context</li>
+      <li>Function Execution Context</li>
+      <li>Execution Context Stack</li>
+      <li>Scope and Scope Chain</li>
+    </ul>
+    <div class="carousel-container carousel-container--9">
+      <img
+        src="../../00-images/javascript-49.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-50.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-51.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>
+      JavaScript Scope
+      <a href="../../08-Behind-the-Scenes/starter/index.html">Know More</a>
+    </h2>
+    <ul>
+      <li>Global Scope</li>
+      <li>Function Scope</li>
+      <li>Block Scope</li>
+      <li>Lexical Scope</li>
+    </ul>
+    <div class="carousel-container carousel-container--10">
+      <img
+        src="../../00-images/javascript-52.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-53.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-54.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-55.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-56.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-57.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>Hoisting and TDZ</h2>
+    <ul>
+      <li>
+        Hoisting: The process by which variable and function declarations are
+        moved to the top of their containing scope during the compile phase
+      </li>
+      <li>
+        Hoisting with var, let, const: Variables declared with var are hoisted
+        and initialized with undefined, while let and const are hoisted but not
+        initialized, leading to the Temporal Dead Zone (TDZ)
+      </li>
+      <li>
+        Temporal Dead Zone (TDZ): The time between the entering of the scope and
+        the variable declaration where the variable cannot be accessed
+      </li>
+      <li>
+        Hoisting with Functions: Function declarations are hoisted and can be
+        called before they are defined, while function expressions and arrow
+        functions behave like variables in terms of hoisting
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--11">
+      <img
+        src="../../00-images/javascript-58.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-59.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>this keyword</h2>
+    <ul>
+      <li>
+        The this keyword in JavaScript refers to the object that is executing
+        the current function
+      </li>
+      <li>
+        In the global context, this refers to the global object (window in
+        browsers)
+      </li>
+      <li>
+        In a regular function, this refers to the object that called the
+        function
+      </li>
+      <li>
+        In an arrow function, this is lexically bound and refers to the this
+        value of the enclosing scope. Not suitable to call this and arguments
+        keywords (<b>but it will be suitable only inside object methods</b>)
+      </li>
+      <li>
+        In event handlers, this refers to the DOM element that received the
+        event
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--12">
+      <img
+        src="../../00-images/javascript-60.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>Memory Management</h2>
+    <ul>
+      <li>
+        JavaScript uses automatic memory management through a process called
+        garbage collection
+      </li>
+      <li>
+        Memory allocation occurs when variables, objects, or data structures are
+        created
+      </li>
+      <li>
+        Garbage collection identifies and frees up memory that is no longer
+        reachable or needed by the program
+      </li>
+      <li>
+        JavaScript primarily uses the mark-and-sweep algorithm for garbage
+        collection
+      </li>
+      <li>
+        Developers can help optimize memory usage by avoiding memory leaks,
+        managing references, and using efficient data structures
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--13">
+      <img
+        src="../../00-images/javascript-61.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-62.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-63.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <hr />
+
+    <h2>Object references</h2>
+    <ul>
+      <li>
+        In JavaScript, objects are stored and assigned by reference, meaning
+        that when you assign an object to a variable or pass it to a function,
+        you are working with a reference to the original object rather than a
+        copy of it
+      </li>
+      <li>
+        When you create an object and assign it to a variable, the variable
+        holds a reference (or pointer) to the memory location where the object
+        is stored
+      </li>
+      <li>
+        <b>Normal Copy:</b>
+        <pre><code>const object2 = object1</code></pre>
+      </li>
+      <li>
+        <b>Shallow Copy(Spread operator):</b> Creates a new object with the same
+        top-level properties as the original object.
+        <b>However, nested objects or arrays are still referenced</b>, meaning
+        changes to nested structures in the arrays are still referenced, meaning
+        changes to nested structures in the copied object will affect the
+        original object and vice versa.
+        <pre><code>const object2 = Object.assign({}, object1);</code></pre>
+      </li>
+      <li>
+        <b>Deep Copy(structuredClone):</b> Creates a new object that is a
+        complete copy of the original object, including all nested objects and
+        arrays. Changes made to the copied object do not affect the original
+        object and vice versa.
+        <pre><code>const object2 = structuredClone(object1);</code></pre>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Garbage Collection</h2>
+    <ul>
+      <li>
+        JavaScript uses automatic memory management through a process called
+        garbage collection
+      </li>
+      <li>
+        Garbage collection identifies and frees up memory that is no longer
+        reachable or needed by the program
+      </li>
+      <li>
+        JavaScript primarily uses the mark-and-sweep algorithm for garbage
+        collection
+      </li>
+      <li>
+        Developers can help optimize memory usage by avoiding memory leaks,
+        managing references, and using efficient data structures
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--14">
+      <img
+        src="../../00-images/javascript-64.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-65.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-66.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-67.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-68.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-69.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

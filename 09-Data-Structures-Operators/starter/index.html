@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Data Structures and Modern Operators</title>
+    <link rel="stylesheet" href="../../style.css" />
     <style>
       body {
-        height: 100vh;
+        /* height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: center; */
         background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,7 +21,6 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
       }
       button {
         width: 50px;
@@ -34,6 +35,410 @@
   </head>
   <body>
     <h1>Data Structures and Modern Operators</h1>
+
+    <h2>Summary</h2>
+    <h3>
+      Destructuring(Arrays & Objects) --> Spread & Rest Operator --> Short
+      Circuting (&& and ||) --> Nullish Coalescing Operator(??) --> Logical
+      Assignment Operatorsin ES 2021 (||=, &&=, ??=)--> Looping Arrays for-of
+      loop --> Enhanced Object Literals --> Optional Chaining (?.) --> Looping
+      Object Properties --> Sets --> Maps --> When to Use Arrays vs Sets and
+      Objects vs Maps in real time scenario --> Working with strings
+    </h3>
+
+    <h2>Array Destructuring</h2>
+    <ul>
+      <li>
+        Destructuring Arrays: Array Destructuring is the process of
+        unpacking(extracting) values from arrays into distinct variables.
+      </li>
+      <li>
+        Nested Destructuring: Nested Destructuring allows unpacking values from
+        nested arrays or objects into distinct variables.
+      </li>
+      <li>
+        Destructuring with Default Values: This technique provides default
+        values for variables when the unpacked value is undefined.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Object Destructuring</h2>
+    <ul>
+      <li>
+        Destructuring Objects: Object Destructuring is the process of unpacking
+        properties from objects into distinct variables.
+      </li>
+      <li>
+        Nested Destructuring: Nested Destructuring allows unpacking properties
+        from nested objects into distinct variables.
+      </li>
+      <li>
+        Destructuring with Default Values: This technique provides default
+        values for variables when the unpacked property is undefined.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Spread Operator</h2>
+    <ul>
+      <li>
+        The Spread Operator (...) is used to expand elements of an iterable
+        (like an array or string) or properties of an object into individual
+        elements or key-value pairs.
+      </li>
+      <li>
+        Difference between spread operator vs Destructuring: Destructuring is
+        used to unpack values from arrays or objects into distinct variables,
+        while the spread operator is used to expand elements of an iterable or
+        properties of an object.
+      </li>
+      <li>
+        Spread operator is mainly used to
+        <b
+          >create shallow copies of arrays or objects, merge arrays or objects,
+          expand array or objects with new objects, merge arrays or objects,
+          expand array or objects with new properties on top of existing, and
+          pass elements as individual arguments to functions </b
+        >.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Rest Operators</h2>
+    <ul>
+      <li>
+        The Rest Operator (...) is used to collect multiple elements into a
+        single array or object.
+      </li>
+      <li>
+        It is useful for handling function parameters, array destructuring, and
+        object destructuring.
+      </li>
+      <li>
+        Rest parameters must be the
+        <b>last parameter in a function definition.</b>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Short Circuiting (&& and ||)</h2>
+    <ul>
+      <li>
+        Short-circuiting is a programming technique where the evaluation of a
+        logical expression stops as soon as the outcome is determined.
+      </li>
+      <li>
+        In JavaScript, the logical operators AND (&&) and OR (||) exhibit
+        short-circuiting behavior.
+      </li>
+      <li>
+        With the OR operator (||), if the first operand is truthy, the second
+        operand is not evaluated because the overall expression will be true. It
+        will return the first truthy value.
+      </li>
+      <li>
+        With the AND operator (&&), if the first operand is falsy, the second
+        operand is not evaluated because the overall expression will be false.
+        It will return the first falsy value.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Nullish Coalescing Operator (??)</h2>
+
+    <ul>
+      <li>
+        The Nullish Coalescing Operator (??) is a logical operator that returns
+        the right-hand operand when the
+        <b>left-hand operand is null or undefined.</b>
+      </li>
+      <li>
+        It is useful for providing default values when dealing with potentially
+        null or undefined variables.
+      </li>
+      <li>
+        Unlike the OR operator (||), which considers all falsy values (like 0,
+        '', false) as triggers to return the right-hand operand, the Nullish
+        Coalescing Operator only considers null and undefined.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Logical Assignment Operatorsin ES 2021</h2>
+    <ul>
+      <li>
+        Logical Assignment Operators are a combination of logical operators (&&,
+        ||, ??) with assignment (=) to provide a concise way to assign values
+        based on certain conditions.
+      </li>
+      <li>
+        The three logical assignment operators are:
+        <ul>
+          <li>Logical OR Assignment (||=)</li>
+          <li>Logical AND Assignment (&&=)</li>
+          <li>Nullish Coalescing Assignment (??=)</li>
+        </ul>
+      </li>
+      <li>
+        These operators help simplify code by reducing redundancy when assigning
+        values based on conditions.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Looping Arrays for-of loop</h2>
+    <ul>
+      <li>
+        The for-of loop is a modern way to iterate over iterable objects like
+        arrays, strings, maps, and sets in JavaScript.
+      </li>
+      <li>
+        It provides a simpler syntax compared to traditional loops like for and
+        while, making the code more readable and concise.
+      </li>
+      <li>
+        The for-of loop automatically handles the iteration process, allowing
+        developers to focus on the logic inside the loop.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Enhanced Object Literals</h2>
+    <ul>
+      <li>
+        Enhanced Object Literals is a feature in JavaScript that allows for a
+        more concise and expressive syntax when defining objects.
+      </li>
+      <li>
+        It includes shorthand property names, method definitions, and computed
+        property names.
+      </li>
+      <li>
+        This feature improves code readability and reduces redundancy when
+        creating objects.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Optional Chaining (?.)</h2>
+    <ul>
+      <li>
+        Optional Chaining (?.) is a feature in JavaScript that allows safe
+        access to deeply nested object properties without having to check for
+        the existence of each property in the chain.
+      </li>
+      <li>
+        It helps prevent runtime errors that occur when trying to access
+        properties of undefined or null values.
+      </li>
+      <li>
+        If any part of the chain is null or undefined, the entire expression
+        short-circuits and returns undefined instead of throwing an error.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Looping Object Properties</h2>
+    <ul>
+      <li>
+        Looping Object Properties involves iterating over the keys, values, or
+        entries of an object using methods like Object.keys(), Object.values(),
+        and Object.entries().
+      </li>
+      <li>
+        This allows developers to access and manipulate object properties
+        efficiently.
+      </li>
+      <li>
+        It is useful for tasks such as data processing, transformation, and
+        analysis.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Sets</h2>
+    <ul>
+      <li>
+        A Set is a built-in JavaScript object that allows you to store unique
+        values of any type, whether primitive values or object references.
+      </li>
+      <li>
+        Sets automatically handle duplicate values, ensuring that each value is
+        stored only once.
+      </li>
+      <li>
+        They provide useful methods for adding, deleting, and checking for the
+        existence of values, as well as properties to get the size of the Set.
+      </li>
+      <li>
+        Real time scenario when we use set: Storing unique user IDs in a web
+        application to prevent duplicate entries.
+      </li>
+    </ul>
+    <h3>Sets Methods till now</h3>
+    <ul>
+      <li>add(value): Adds a new element with the given value to the Set.</li>
+      <li>delete(value): Removes the specified element from the Set.</li>
+      <li>
+        has(value): Returns a boolean indicating whether the Set contains the
+        specified value.
+      </li>
+      <li>clear(): Removes all elements from the Set.</li>
+      <li>size: A property that returns the number of elements in the Set.</li>
+      <li>
+        Intersection: Returns a new Set containing elements that are present in
+        both Sets.
+      </li>
+      <li>
+        Union: Returns a new Set containing all unique elements from both Sets.
+      </li>
+      <li>
+        Difference: Returns a new Set containing elements that are in the first
+        Set but not in the second Set.
+      </li>
+      <li>
+        Symmetric Difference: Returns a new Set containing elements that are in
+        either of the Sets but not in both.
+      </li>
+      <li>
+        isDisjoint: Returns a boolean indicating whether two Sets have no
+        elements in common.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Maps</h2>
+    <ul>
+      <li>
+        A Map is a built-in JavaScript object that allows you to store key-value
+        pairs, where both keys and values can be of any type (primitive values
+        or object references).
+      </li>
+      <li>
+        Maps maintain the order of insertion, meaning that when you iterate over
+        a Map, the entries will be returned in the order they were added.
+      </li>
+      <li>
+        They provide useful methods for adding, deleting, and retrieving values
+        based on their keys, as well as properties to get the size of the Map.
+      </li>
+      <li>
+        Real time scenario when we use map: Storing and managing user session
+        data in a web application.
+      </li>
+    </ul>
+    <h3>Maps Methods till now</h3>
+    <ul>
+      <li>set(key, value): Adds a new key-value pair to the Map.</li>
+      <li>get(key): Retrieves the value associated with the specified key.</li>
+      <li>
+        has(key): Returns a boolean indicating whether the Map contains the
+        specified key.
+      </li>
+      <li>delete(key): Removes the specified key-value pair from the Map.</li>
+      <li>clear(): Removes all key-value pairs from the Map.</li>
+      <li>
+        size: A property that returns the number of key-value pairs in the Map.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>
+      When to Use Arrays vs Sets and Objects vs Maps in real time scenario
+    </h2>
+    <ul>
+      <li>
+        Use Arrays when you need an ordered collection of items that may contain
+        duplicates, such as a list of tasks or a collection of user comments.
+      </li>
+      <li>
+        Use Sets when you need to store unique values and want to prevent
+        duplicates, such as a collection of unique user IDs or tags.
+      </li>
+      <li>
+        Use Objects when you need to store key-value pairs with string keys,
+        such as user profiles or configuration settings.
+      </li>
+      <li>
+        Use Maps when you need to store key-value pairs with keys of any type
+        (not just strings) and want to maintain the order of insertion, such as
+        caching data with complex keys or storing metadata.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Working with strings</h2>
+    <ul>
+      <li>
+        Strings in JavaScript are sequences of characters used to represent
+        text.
+      </li>
+      <li>
+        Strings are immutable, meaning that once created, their values cannot be
+        changed. Any operation that modifies a string will create a new string
+        instead.
+      </li>
+      <li>
+        <b>How methods are working in strings:</b> JS automatically converts
+        String into Object when methods are called. This is called
+        <b>"boxing"</b>.
+      </li>
+      <li>
+        Chaining methods allows you to perform multiple operations on a string
+        in a single line of code.
+      </li>
+    </ul>
+    <h3>String Methods used in this course</h3>
+    <ul>
+      <li>length: returns the length of the string</li>
+      <li>
+        indexOf, lastIndexOf: returns the index of a specified value in a string
+      </li>
+      <li>
+        slice: extracts a section of a string and returns it as a new string
+      </li>
+      <li>
+        toLowerCase, toUpperCase: converts the string to lowercase or uppercase
+      </li>
+      <li>trim: removes whitespace from both ends of a string</li>
+      <li>
+        replace, replaceAll: replaces occurrences of a substring with a new
+        substring
+      </li>
+      <li>
+        includes, startsWith, endsWith: checks if a string contains, starts
+        with, or ends with a specified substring
+      </li>
+      <li>
+        split, join: splits a string into an array or joins an array into a
+        string
+      </li>
+      <li>
+        padStart, padEnd: pads a string with another string until it reaches a
+        specified length
+      </li>
+      <li>repeat: repeats a string a specified number of times</li>
+    </ul>
+    <h3>Coding Challenge</h3>
+    <div id="challenge"></div>
+
+    <hr />
+
     <script src="script.js"></script>
   </body>
 </html>
