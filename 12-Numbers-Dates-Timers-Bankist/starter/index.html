@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -118,6 +118,176 @@
         You will be logged out in <span class="timer">05:00</span>
       </p>
     </main>
+
+    <!-- Arrays Methods Practice -->
+    <div class="array-methods">
+      <style>
+        .array-methods {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          line-height: 1.6;
+          font-size: 16px;
+          max-width: 1000px;
+          margin: auto;
+        }
+        .array-methods h2 {
+          color: #333;
+          font-size: 24px;
+        }
+        .array-methods ul {
+          list-style-type: disc;
+          margin-left: 20px;
+        }
+        .array-methods li {
+          margin-bottom: 8px;
+        }
+      </style>
+
+      <h2>JavaScript Numbers, dates, internationalisation and timers</h2>
+
+      <h3>Ways to convert and check Numbers</h3>
+      <ul>
+        <li>Number() - to convert strings and booleans to numbers</li>
+        <li>parseInt() - to convert strings to integers</li>
+        <li>parseFloat() - to convert strings to floating point numbers</li>
+        <li>isNaN() - to check if a value is NaN</li>
+        <li>isFinite() - to check if a value is a finite number</li>
+        <li>isInteger() - to check if a value is an integer</li>
+        <li>
+          Math.sqrt(), Math.max(), Math.min(), Math.PI - various math functions
+          and constants
+        </li>
+        <li>+(string) - to convert a string to a number</li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>Mathematical Operations</h3>
+      <ul>
+        <li>Math.floor() - to round down to the nearest integer</li>
+        <li>Math.ceil() - to round up to the nearest integer</li>
+        <li>Math.round() - to round to the nearest integer</li>
+        <li>Math.trunc() - to truncate a number (remove decimal part)</li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+      <h3>Rounding Decimals & Integers</h3>
+      <ul>
+        <li>
+          toFixed() - to format a number to a fixed number of decimal places
+        </li>
+        <li>
+          toPrecision() - to format a number to a fixed number of significant
+          digits
+        </li>
+        <li>round() - to round a number to the nearest integer</li>
+        <li>ceil() - to round a number up to the nearest integer</li>
+        <li>floor() - to round a number down to the nearest integer</li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>Reminders</h3>
+      <ul>
+        <li>% - to get the remainder of a division</li>
+        <li>** - to perform exponentiation (power)</li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>Numeric Separators</h3>
+      <ul>
+        <li>1234567890 - to separate digits in large numbers</li>
+        <li>1_234_567_890 - to separate digits in large numbers (ES2021)</li>
+        <li>
+          Advantages: Improved readability and maintainability of large numbers.
+        </li>
+        <li>
+          How it works: The underscore is ignored by JavaScript and only serves
+          as a visual separator.
+        </li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>Big Int</h3>
+      <ul>
+        <li>
+          BigInt is a built-in object in JavaScript that provides a way to
+          represent integers with arbitrary precision.
+        </li>
+        <li>
+          Advantages: Can handle very large integers that exceed the range of
+          regular numbers.
+        </li>
+        <li>
+          Drawbacks: BigInts cannot be used with regular numbers in arithmetic
+          operations without explicit conversion. It cannot used in logical
+          operations.
+        </li>
+        <li>BigInt() - to create a BigInt value</li>
+        <li>123n - to create a BigInt literal</li>
+        <li>BigInt(123) - to convert a number to a BigInt</li>
+        <li>123n + 456n - to perform arithmetic operations with BigInts</li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h3>Dates and Times</h3>
+      <ul>
+        <li>
+          A date is a data type that represents a specific point in time,
+          including the year, month, day, hour, minute, second, and millisecond.
+        </li>
+        <li>
+          A time is a data type that represents a specific point in time,
+          including the hour, minute, second, and millisecond.
+        </li>
+        <li>
+          new Date() - to create a new date object with the current date and
+          time
+        </li>
+        <li>
+          new Date(dateString) - to create a new date object from a date string
+        </li>
+        <li>
+          new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+          - to create a new date object with specific date and time
+        </li>
+        <li>
+          Date.now() - to get the current timestamp in milliseconds since
+          January 1, 1970
+        </li>
+        <li>date.getFullYear() - to get the year of a date object</li>
+        <li>date.getMonth() - to get the month of a date object (0-11)</li>
+        <li>
+          date.getDate() - to get the day of the month of a date object (1-31)
+        </li>
+        <li>date.getHours() - to get the hours of a date object (0-23)</li>
+        <li>date.getMinutes() - to get the minutes of a date object (0-59)</li>
+        <li>date.getSeconds() - to get the seconds of a date object (0-59)</li>
+        <li>
+          date.toISOString() - to convert a date object to an ISO string
+          (YYYY-MM-DDTHH:mm:ss.sssZ)
+        </li>
+        <li>
+          date.toLocaleDateString(locale, options) - to format a date object
+          according to a specific locale and options (e.g., long date formata)
+        </li>
+      </ul>
+    </div>
 
     <!-- <footer>
       &copy; by Jonas Schmedtmann. Don't claim as your own :)
