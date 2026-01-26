@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -46,6 +46,9 @@
         <a href="#javascript-numbers-dates-internationalization-and-timers"
           >JavaScript Numbers, Dates, Internationalization and Timers</a
         >
+      </li>
+      <li>
+        <a href="#advanced-dom-and-events">Advanced DOM and Events</a>
       </li>
     </ul>
 
@@ -685,7 +688,11 @@
         Mastering these concepts enhances your ability to create flexible,
         maintainable, and efficient applications.
       </li>
-      <li></li>
+      <li>
+        Guard clause (i.e: if(false) return;). Guard clause is used to exit the
+        function if certain condition is not met. Advantage: avoids nested if
+        statements.
+      </li>
     </ul>
     <div class="carousel-container carousel-container--9">
       <img
@@ -790,7 +797,293 @@
       >
     </h2>
     <h3>Section Overview</h3>
-    <ul></ul>
+    <ul>
+      <li>
+        JavaScript provides various methods to convert and check numbers,
+        including Number(), parseInt(), parseFloat(), isNaN(), isFinite(), and
+        isInteger().
+      </li>
+      <li>
+        Mathematical operations in JavaScript can be performed using methods
+        like Math.floor(), Math.ceil(), Math.round(), and Math.trunc().
+      </li>
+      <li>
+        JavaScript offers features for rounding decimals and integers, such as
+        toFixed(), toPrecision(), round(), ceil(), and floor().
+      </li>
+      <li>
+        Numeric separators (e.g., 1_000_000) improve the readability of large
+        numbers in JavaScript.
+      </li>
+      <li>
+        BigInt is a built-in object that allows representation of integers with
+        arbitrary precision, useful for handling very large integers.
+      </li>
+      <li>
+        JavaScript provides various methods for working with dates and times,
+        including creating date objects, retrieving date components, and
+        formatting dates.
+      </li>
+      <li>
+        Internationalization features in JavaScript allow formatting of dates
+        and numbers according to specific locales and options using
+        Intl.DateTimeFormat() and Intl.NumberFormat().
+      </li>
+      <li>
+        Timers in JavaScript can be managed using setTimeout() and setInterval()
+        for scheduling function execution after a delay or at regular intervals.
+      </li>
+    </ul>
+
+    <h2 id="advanced-dom-and-events">
+      Advanced DOM and Events
+      <a href="./13-Advanced-DOM-Bankist/starter/index.html">Learn More</a>
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        DOM is not part of JS. It is Web API to interact with the HTML document
+        and Browser Events.
+      </li>
+      <li>
+        DOM consists of nodes (elements, attributes, text) and provides methods
+        to manipulate(Create, Update, Delete) them.
+      </li>
+      <li>
+        Events are actions or occurrences that happen in the browser, such as
+        clicks or key presses which is getting from event target.
+      </li>
+      <li>
+        DOM Select Elements: querySelector, querySelectorAll, getElementById,
+        getElementsByClassName, getElementsByTagName
+      </li>
+      <li>
+        Difference between querySelector and getElementsByClassName is that
+        querySelector returns first matching element and getElementsByClassName
+        returns HTMLCollection of all matching elements. Also, querySelector
+        supports foreach loop directly whereas HTMLCollection need to convert
+        into array first to use forEach loop.
+      </li>
+      <li>DOM Create Elements: createElement, insertAdjacentHTML, innerHTML</li>
+      <li>DOM Insert Elements: append, prepend, before, after, cloneNode</li>
+      <li>DOM Delete Elements: remove, innerHTML = ''</li>
+      <li>DOM Update Elements: textContent, innerHTML, setAttribute, style</li>
+      <li>
+        DOM Classes: style property, classList (add, remove, toggle, contains)
+      </li>
+      <li>DOM Styles : style property, getComputedStyle(), setProperty()</li>
+      <li>
+        DOM Attributes: getAttribute, setAttribute, hasAttribute,
+        removeAttribute
+      </li>
+      <li>
+        DOM Window Scroll Properties: scrollX, scrollY, pageXOffset, pageYOffset
+      </li>
+      <li>
+        DOM Window Scroll Methods: scrollTo(), scrollBy(), scrollIntoView()
+      </li>
+      <li>
+        DOM Element Scroll Properties: getBoundingClientRect(). It returns the
+        size and position of an element relative to the viewport.
+      </li>
+      <li>
+        DOM height and Width: clientHeight, clientWidth, scrollHeight,
+        scrollWidth
+      </li>
+      <li>
+        DOM Events: addEventListener, removeEventListener,
+        onmouseenter(old-methods, overriden when we cal other functions) , event
+        propagation(bubbling and capturing), event delegation
+      </li>
+      <li>
+        Capturing Phase: When events are captured and handled by the ancestors
+        of the target element
+      </li>
+      <li>
+        Target Phase: When events are handled by the target element itself
+      </li>
+      <li>
+        Bubbling Phase: When events bubble up and are handled by the ancestors
+        of the target element (from target to root - bottom to top).
+      </li>
+      <li>addEventListener, third parameter false indicates bubbling phase.</li>
+      <li>
+        addEventListener("mouseover") is the opposite of mouseout. mouseover is
+        the preferred eventlistener because it follow bubble event propagation
+        where as mouseenter doesn't.
+      </li>
+      <li>addEventListener("mouseenter") is the opposite of mouseleave.</li>
+      <li>
+        Event Propagation: The process of how events move through the DOM tree
+        (capturing-> target-> bubbling)
+      </li>
+      <li>
+        Event delegation: A technique where a single event listener is added to
+        a parent element to handle events for all its children. main advantage
+        is performance improvement when dealing with many elements.
+      </li>
+      <li>
+        DOM Traversing: It allows navigation through the DOM tree from a
+        selected element to its parents, children, and siblings using properties
+        like parentNode, children.
+      </li>
+      <li>
+        DOM Traversing Children: children, childElementCount, firstChild,
+        lastChild, firstElementChild, lastElementChild
+      </li>
+      <li>DOM Traversing Parents: parentNode, parentElement, closest()</li>
+      <li>
+        DOM Traversing Siblings: previousSibling, nextSibling,
+        previousElementSibling, nextElementSibling
+      </li>
+      <li>
+        Event Passing as arguments: Using bind() method to pass arguments to
+        event handlers
+      </li>
+      <li>
+        Intersection Observer definition: A way to observe when elements
+        intersect with the viewport or other elements
+      </li>
+      <li>
+        Intersection Observer Process: The process of observing elements and
+        triggering callbacks when they intersect with a root element or viewport
+        which meets the threshold value. rootmargin is the margin around the
+        root element.
+      </li>
+      <li>Intersection Observer API: observe(), unobserve(), disconnect()</li>
+      <li>
+        Lazy Loading: A technique to defer loading of images until they are
+        needed
+      </li>
+      <li>DOM Lifecycle Events: DOMContentLoaded, load, beforeunload</li>
+      <li>
+        DOMContentLoaded event is fired when the HTML is completely parsed and
+        DOM tree is built. It does not wait for stylesheets, images, and
+        subframes to finish loading.
+      </li>
+      <li>
+        load event is fired when the whole page has loaded, including all
+        dependent resources such as stylesheets and images.
+      </li>
+      <li>
+        beforeunload event is fired when the window, the document and its
+        resources are about to be unloaded. This event enables you to display a
+        confirmation dialog to the user, asking them if they really want to
+        leave the page.
+      </li>
+      <li>
+        Effeicient script loading methods: Regular(end-of-body) vs async vs
+        defer
+      </li>
+      <li>
+        Regular script loading: Scripts are executed immediately when they are
+        encountered in the HTML document.
+      </li>
+      <li>
+        Async script loading: Scripts are downloaded asynchronously and executed
+        as soon as they are downloaded, without blocking the HTML parsing.
+      </li>
+      <li>
+        Defer script loading: Scripts are downloaded asynchronously and executed
+        after the HTML document is fully parsed, but before the DOMContentLoaded
+        event.
+      </li>
+      <li>
+        Most efficient script loading method: Defer is generally the most
+        efficient for scripts that depend on the DOM being fully loaded. It
+        ensures that the script runs after the HTML is parsed, without blocking
+        the rendering of the page. Also, multiple defer scripts maintain their
+        order of execution.
+      </li>
+    </ul>
+
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--11">
+      <img
+        src="./00-images/javascript-79.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-80.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-81.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-82.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-83.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-84.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h3>
+      Project 5: Bankist App
+      <a href="./13-Advanced-DOM-Bankist/starter/index.html">Learn More</a>
+    </h3>
+    <p>Important Points</p>
+    <ul>
+      <!-- <li>
+        Calling init function inside click listeners
+        <pre><code>btnNew.addEventListener('click', init);</code></pre>
+      </li>
+      <li>
+        Difference between calling function name vs calling function with
+        parentheses
+        <pre><code>btnCheck.addEventListener('click', checkNumber); // correct</code></pre>
+        <pre><code>btnCheck.addEventListener('click', checkNumber()); // incorrect(It will load function initally also)</code></pre>
+      </li> -->
+      <li>
+        Use of Intl API to format dates and currency based on user locale
+        <pre><code>new Intl.DateTimeFormat(locale, options).format(date);</code></pre>
+        <pre><code>new Intl.NumberFormat(locale, options).format(number);</code></pre>
+      </li>
+      <li>
+        Use header menu fade-in and fade-out using js event delegation method
+        <pre><code>document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {   
+    console.log(id);
+  }
+});</code></pre>
+        <pre><code>nav.addEventListener('mouseover', function (e) { ... });</code></pre>
+        <pre><code>nav.addEventListener('mouseout', function (e) { ... });</code></pre>
+      </li>
+      <li>
+        Use Intersection Observer API for sticky navigation, sections visible
+        and lazy loading images
+        <pre><code>const observer = new IntersectionObserver(callback, options);</code></pre>
+        <pre><code>observer.observe(targetElement);</code></pre>
+      </li>
+      <li>
+        Implement slider functionality using js logic and event handlers
+        <pre><code>btnRight.addEventListener('click', nextSlide);</code></pre>
+        <pre><code>slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`), // Move slides to left or right based on current slide
+  );</code></pre>
+      </li>
+    </ul>
+
     <h2>PPT for the entire course</h2>
     <iframe
       src="./theory-lectures-v2.3.pdf"
