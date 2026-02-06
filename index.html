@@ -50,6 +50,11 @@
       <li>
         <a href="#advanced-dom-and-events">Advanced DOM and Events</a>
       </li>
+      <li>
+        <a href="#object-oriented-programming-oop-with-javascript"
+          >Object Oriented Programming (OOP) With JavaScript</a
+        >
+      </li>
     </ul>
 
     <!-- <h2>Projects</h2>
@@ -504,7 +509,8 @@
         Difference between calling function name vs calling function with
         parentheses
         <pre><code>btnCheck.addEventListener('click', checkNumber); // correct</code></pre>
-        <pre><code>btnCheck.addEventListener('click', checkNumber()); // incorrect(It will load function initally also)</code></pre>
+        <pre><code>btnCheck.addEventListener('click', checkNumber()); 
+          // incorrect(It will load function initally also)</code></pre>
       </li>
     </ul>
 
@@ -1079,10 +1085,172 @@
         Implement slider functionality using js logic and event handlers
         <pre><code>btnRight.addEventListener('click', nextSlide);</code></pre>
         <pre><code>slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`), // Move slides to left or right based on current slide
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`), 
+    // Move slides to left or right based on current slide
   );</code></pre>
       </li>
     </ul>
+
+    <h2 id="object-oriented-programming-oop-with-javascript">
+      Object Oriented Programming (OOP) With JavaScript
+      <a href="./14-OOP/starter/index.html">Learn More</a>
+    </h2>
+
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        Object-oriented programming (OOP) is a programming paradigm that uses
+        objects and classes to organize code.
+      </li>
+      <li>
+        4 Fundamental OOP Concepts: Encapsulation, Abstraction, Inheritance,
+        Polymorphism
+      </li>
+      <li>
+        Encapsulation is the practice of keeping fields within a class private,
+        then providing access to them via public methods.
+      </li>
+      <li>
+        Abstraction is the concept of hiding the complex implementation details
+        and showing only the necessary features of an object.
+      </li>
+      <li>
+        Inheritance is a mechanism that allows a new class (subclass) to inherit
+        properties and methods from an existing class (superclass).
+      </li>
+      <li>
+        Polymorphism is the ability of different classes to be treated as
+        instances of the same class through inheritance, typically by overriding
+        methods.
+      </li>
+      <li>
+        JavaScript is a prototype-based language, not a class-based one.
+        prototypes actually means "to first show" which is a mechanism by which
+        an object can inherit properties and methods from another object.
+      </li>
+      <li>
+        Every object has a prototype, and the prototype itself is an object,
+        which can have its own prototype, forming a chain.
+      </li>
+      <li>
+        Prototype chain: Objects can inherit from other objects, forming a chain
+        of prototypes.
+      </li>
+      <li>
+        Prototype Inheritance allows objects to inherit properties and methods
+        from other objects.
+      </li>
+      <li>
+        3 ways to implement Prototype inheritance in javascript: Constructor
+        functions, ES6 Classes, Object.create()
+      </li>
+      <li>
+        Constructor functions:
+        <ul>
+          <li>
+            Constructor functions are used to create and initialize objects in
+            JavaScript. This is how in-built objects like Array, Date, and
+            others are created.
+          </li>
+          <li>
+            Inheritance between constructor functions is achieved using the
+            prototype property.
+          </li>
+        </ul>
+      </li>
+      <li>
+        ES6 Classes:
+        <ul>
+          <li>
+            ES6 classes are syntactic sugar over constructor functions. It means
+            that classes are just a different way of writing constructor
+            functions. However it is not similar to classes in other programming
+            languages like Java, C++ etc as JavaScript still uses
+            prototype-based inheritance under the hood even when using ES6
+            classes whereas other programming languages use class-based
+            inheritance.
+          </li>
+          <li>
+            They provide a more concise and readable way to create objects and
+            implement inheritance.
+          </li>
+          <li>
+            Inheritance between ES6 classes is achieved using the `extends`
+            keyword and `super()` function.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Object.create():
+        <ul>
+          <li>
+            The Object.create() method creates a new object, using an existing
+            object as the prototype of the newly created object.
+          </li>
+          <li>
+            It allows us to create objects that inherit properties and methods
+            from another object, without the need for constructor functions or
+            classes.
+          </li>
+          <li>
+            Inheritance using Object.create() is achieved by creating a new
+            object that inherits from the prototype of the superclass.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--12">
+      <img
+        src="./00-images/javascript-85.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-86.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-87.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-92.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-93.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-95.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-97.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-98.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
 
     <h2>PPT for the entire course</h2>
     <iframe

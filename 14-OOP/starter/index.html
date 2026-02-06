@@ -1,16 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Object Oriented Programming (OOP) With JavaScript</title>
+    <link rel="stylesheet" href="../../style.css" />
     <style>
       body {
-        height: 100vh;
+        /* height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: center; */
         background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: white;
       }
       h1 {
         font-family: sans-serif;
@@ -19,12 +21,808 @@
         width: 100%;
         padding: 30px;
         text-align: center;
-        color: white;
+      }
+      button {
+        width: 50px;
+        height: 20px;
+        margin: 10px;
+      }
+      textarea {
+        width: 300px;
+        height: 100px;
       }
     </style>
     <script defer src="script.js"></script>
   </head>
   <body>
     <h1>Object Oriented Programming (OOP) With JavaScript</h1>
+
+    <h2>Introduction</h2>
+    <ul>
+      <li>
+        Object-oriented programming (OOP) is a programming paradigm that uses
+        objects and classes to organize code.
+      </li>
+      <li>
+        Classes are blueprints for creating objects. It defines the structure
+        and behavior of objects.
+      </li>
+      <li>
+        Objects are instances of classes, containing data and methods to
+        manipulate that data.
+      </li>
+      <li>Instances are created from classes using the `new` keyword.</li>
+      <li>
+        4 Fundamental OOP Concepts: Encapsulation, Abstraction, Inheritance,
+        Polymorphism
+      </li>
+      <li>
+        <ol>
+          <li>
+            <b>Abstraction</b>: Abstraction is the process of hiding complex
+            implementation details and showing only the essential features of an
+            object.
+          </li>
+          <li>
+            <b>Encapsulation</b>: Encapsulation is the process of bundling data
+            and methods that operate on that data within a single unit, known as
+            a class.
+          </li>
+          <li>
+            <b>Inheritance</b>: Inheritance is a mechanism that allows a new
+            class (subclass) to inherit properties and methods from an existing
+            class (superclass).
+          </li>
+          <li>
+            <b>Polymorphism</b>: Polymorphism is the ability of different
+            classes to be treated as instances of the same class through a
+            common interface.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--1">
+      <img
+        src="../../00-images/javascript-85.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-86.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-87.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-88.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-89.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-90.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-91.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>OOP in JavaScript</h2>
+    <ul>
+      <li>
+        JavaScript is a prototype-based language, not a class-based one.
+        prototypes actually means "to first show" which is a mechanism by which
+        an object can inherit properties and methods from another object.
+      </li>
+      <li>
+        <b>Prototype Inheritance</b>: JavaScript uses prototypes to create
+        inheritance between objects. Prototypes are objects from which other
+        objects can inherit properties and methods.
+      </li>
+      <li>Example: Array prototype methods: map (Array.prototype.map)</li>
+      <li>
+        3 ways to implement Prototype inheritance in javascript:
+        <ol>
+          <li>
+            <b>Constructor functions</b>: Constructor functions are used to
+            create and initialize objects in JavaScript. This is how in-built
+            objects like Array, Date, and others are created.
+          </li>
+          <li>
+            <b>ES6 Classes</b>: ES6 classes are syntactic sugar over constructor
+            functions. It means that classes are just a different way of writing
+            constructor functions. However it is not similar to classes in other
+            programming languages like Java, C++ etc as JavaScript still uses
+            prototype-based inheritance under the hood even when using ES6
+            classes whereas other programming languages use class-based
+            inheritance.
+          </li>
+          <li>
+            <b>Object.create()</b>: The Object.create() method creates a new
+            object, using an existing object as the prototype of the newly
+            created object.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--2">
+      <img
+        src="../../00-images/javascript-92.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-93.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Constructor Functions</h2>
+    <ul>
+      <li>
+        Constructor functions are used to create and initialize objects in
+        JavaScript.
+      </li>
+      <li>
+        Convention: Start the name of constructor functions with a capital
+        letter.
+      </li>
+      <li>Use the `new` keyword to create an instance of the object.</li>
+      <li>
+        Inside the constructor function, use `this` keyword to refer to the
+        newly created object.
+      </li>
+      <li>Add properties and methods to the object using `this` keyword.</li>
+      <li>
+        Examples of Constructor Functions:
+        <pre>
+          <code>
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear; 
+};
+          </code>
+        </pre>
+        <pre><code>
+const john = new Person('John', 1990);
+const jane = new Person('Jane', 1985);
+      </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Prototype</h2>
+    <ul>
+      <li>
+        Every function in JavaScript has a `prototype` property that is used to
+        build the `__proto__` property of the objects created by that function
+        when used as a constructor.
+      </li>
+      <li>
+        The `prototype` property is an object that contains properties and
+        methods that can be shared among all instances of the constructor
+        function.
+      </li>
+      <li>
+        When a new object is created using a constructor function, the new
+        object's `__proto__` property is set to point to the constructor
+        function's `prototype` object.
+      </li>
+      <li>
+        This allows all instances of the constructor function to share the same
+        properties and methods defined on the prototype, rather than each
+        instance having its own copy.
+      </li>
+      <li>
+        Example: Adding a method to the prototype of a constructor function so
+        that all instances can access it.
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>
+      Behind the Scenes of new Operator and Constructor Function and Prototype
+      Chain
+    </h2>
+    <ul>
+      <li>
+        When a constructor function is called with the `new` operator, a new
+        object is created and its `__proto__` property is set to point to the
+        constructor function's `prototype` object.
+      </li>
+      <li>
+        This creates a prototype chain, where the new object can access
+        properties and methods defined on the constructor function's prototype.
+      </li>
+      <li>
+        If a property or method is not found on the new object, JavaScript looks
+        for it on the prototype object, and then continues up the prototype
+        chain until it finds the property or method or reaches the end of the
+        chain.
+      </li>
+      <li>
+        This allows for efficient memory usage, as properties and methods can be
+        shared among multiple instances of a constructor function through the
+        prototype.
+      </li>
+      <li>
+        <b>Prototype Chain:</b> The chain of objects linked through the
+        __proto__ property, allowing inheritance of properties and methods.
+      </li>
+    </ul>
+    <div class="carousel-container carousel-container--3">
+      <img
+        src="../../00-images/javascript-94.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-95.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-96.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="../../00-images/javascript-97.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Array Prototype in-built Methods</h2>
+    <ul>
+      <li>
+        JavaScript provides several built-in methods for arrays that are defined
+        on the Array prototype.
+      </li>
+      <li>
+        These methods can be called on any array instance, allowing for
+        efficient manipulation and processing of array data.
+      </li>
+      <li>
+        Examples of Array prototype methods include:
+        <ul>
+          <li>
+            <b>map()</b>: Creates a new array with the results of calling a
+            provided function on every element in the calling array.
+          </li>
+          <li>
+            <b>filter()</b>: Creates a new array with all elements that pass the
+            test implemented by the provided function.
+          </li>
+          <li>
+            <b>reduce()</b>: Executes a reducer function on each element of the
+            array, resulting in a single output value.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Create custom methods on prototypes to extend functionality. But it is
+        bad practice as it can lead to conflicts.
+      </li>
+      <li>
+        Array Prototype Chain: Array.prototype -> Object.prototype -> null
+      </li>
+      <li>
+        HTML Element Prototype Chain: HTMLHeadingElement.prototype ->
+        HTMLElement.prototype -> Element.prototype -> Node.prototype ->
+        EventTarget.prototype -> Object.prototype -> null
+      </li>
+      <li>
+        Function Prototype Chain: Function.prototype -> Object.prototype -> null
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>ES6 Classes</h2>
+    <ul>
+      <li>
+        ES6 classes are a syntactical sugar over constructor functions in
+        JavaScript.
+      </li>
+      <li>
+        They provide a more concise and readable way to create objects and
+        implement inheritance.
+      </li>
+      <li>
+        Classes are defined using the `class` keyword, followed by the class
+        name and a set of curly braces.
+      </li>
+      <li>
+        Inside the class, we can define a constructor method to initialize
+        object properties, as well as other methods that will be shared among
+        all instances of the class.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+        </code></pre>
+      </li>
+      <li>
+        Key points about ES6 classes:
+        <ul>
+          <li>
+            Classes are not hoisted. It means you cannot use a class before it
+            is declared.
+          </li>
+          <li>
+            Classes are first-class citizens. They can be passed as arguments to
+            functions, returned from functions, and assigned to variables.
+          </li>
+          <li>
+            Classes use strict mode by default. It means that the code inside
+            the class is executed in strict mode.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Getters and Setters</h2>
+    <ul>
+      <li>
+        Getters and setters are special methods that allow us to define
+        properties on an object that can be accessed and modified like regular
+        properties, but with additional logic.
+      </li>
+      <li>
+        Getters are used to retrieve the value of a property, while setters are
+        used to set the value of a property.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Person { 
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  get info() {
+    return `${this.name} is ${this.age} years old`;
+  }
+  set info(value) {
+    const [name, age] = value.split(' ');
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const person = new Person('John', 30);
+console.log(person.info); // John is 30 years old
+person.info = 'Jane 25';
+console.log(person.info); // Jane is 25 years old
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Methods in Classes</h2>
+    <ul>
+      <li>
+        Methods in classes are functions that are defined inside a class and it
+        will be shared among all instances of the class.
+      </li>
+      <li>
+        Methods can be defined using the method syntax, which is similar to
+        defining functions outside of a class.
+      </li>
+      <li>
+        <b>Instance methods</b> are methods that are called on instances of the
+        class. They can access and modify the instance's properties using the
+        `this` keyword.
+      </li>
+      <li>
+        <b>Static methods</b> are methods that are called on the class itself,
+        not on instances of the class. They are defined using the `static`
+        keyword and cannot access instance properties.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Car {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+  // Instance method
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+  // Static method
+  static honk() {
+    console.log('Beep beep!');
+  }
+}
+const bmw = new Car('BMW', 120);
+bmw.accelerate(); // BMW is going at 130 km/h
+Car.honk(); // Beep beep!
+bmw.honk(); // Error: bmw.honk is not a function
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Object.create()</h2>
+    <ul>
+      <li>
+        Object.create() is a method that creates a new object, using an existing
+        object as the prototype of the newly created object.
+      </li>
+      <li>
+        It allows us to create objects that inherit properties and methods from
+        another object, without the need for constructor functions or classes.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+const personProto = {
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};
+const john = Object.create(personProto);
+john.name = 'John';
+john.greet(); // Hello, my name is John
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Inheritance between Classes: Constructor Functions</h2>
+    <ul>
+      <li>
+        Inheritance is a mechanism that allows a new class (subclass) to inherit
+        properties and methods from an existing class (superclass).
+      </li>
+      <li>
+        In constructor functions, inheritance can be implemented by setting the
+        prototype of the subclass to an instance of the superclass.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+const Vehicle = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+const Car = function (make, speed, fuel) {
+  Vehicle.call(this, make, speed); // Inherit properties from Vehicle
+  this.fuel = fuel;
+};
+<b>Car.prototype = Object.create(Vehicle.prototype); // New Object will inherit methods from Vehicle</b>
+Car.prototype.constructor = Car; // Set the constructor property to Car
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Inheritance between Classes: ES6 Classes</h2>
+    <ul>
+      <li>
+        In ES6 classes, inheritance is implemented using the `extends` keyword.
+      </li>
+      <li>
+        The subclass can call the superclass's constructor using the `super()`
+        function.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Vehicle {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+}
+class Car extends Vehicle {
+  constructor(make, speed, fuel) {
+    super(make, speed); // Inherit properties from Vehicle
+    this.fuel = fuel;
+  }
+}
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Inheritance between Classes: Object.create()</h2>
+    <ul>
+      <li>
+        Inheritance can also be implemented using Object.create() by creating a
+        new object that inherits from the prototype of the superclass.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+const vehicleProto = {
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  },
+};
+// Create Car prototype that inherits from vehicleProto
+const carProto = Object.create(vehicleProto);
+carProto.init = function (make, speed, fuel) {
+  this.make = make;
+  this.speed = speed;
+  this.fuel = fuel;
+};
+const myCar = Object.create(carProto);
+myCar.init('BMW', 120, 'Petrol');
+myCar.accelerate(); // BMW is going at 130 km/h
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>OOPS Concepts with Class Example</h2>
+    <ul>
+      <li>
+        Example of OOP concepts (Abstraction, Encapsulation, Inheritance,
+        Polymorphism) using ES6 classes.
+      </li>
+      <li>
+        Abstraction: Hiding complex implementation details and showing only the
+        essential features of an object.
+      </li>
+      <li>
+        Encapsulation: Bundling data and methods that operate on that data
+        within a single unit, known as a class.
+      </li>
+      <li>
+        Inheritance: A mechanism that allows a new class (subclass) to inherit
+        properties and methods from an existing class (superclass).
+      </li>
+      <li>
+        Polymorphism: The ability of different classes to be treated as
+        instances of the same class through inheritance, typically by overriding
+        methods.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+    this.locale = navigator.language;
+  }
+
+  deposit(val) {
+    // Public Interface. We are using deposit method to add money to the account.
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val); // Abstraction. We are using deposit method to withdraw money by passing negative value.
+  }
+
+  _approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this._approveLoan(val)) {
+      // Encapsulation. We are using a private method to approve loan which is not accessible outside the class.
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
+}
+
+const acc1 = new Account('Jonas', 'EUR', 1111);
+console.log(acc1);
+acc1.deposit(250);
+acc1.withdraw(100);
+acc1.requestLoan(1000);
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Encapsulation: Adding Private Fields and Methods</h2>
+    <ul>
+      <li>
+        Encapsulation can be achieved in JavaScript by using private fields and
+        methods, which are not accessible from outside the class.
+      </li>
+      <li>
+        Private fields are defined using the `#` syntax and can only be accessed
+        within the class.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class BankAccount {
+  #balance; // Private field
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+  deposit(amount) {
+    this.#balance += amount;
+    console.log(`Deposited ${amount}. New balance: ${this.#balance}`);
+  }
+  withdraw(amount) {
+    if (amount > this.#balance) {
+      console.log('Insufficient funds');
+    } else {
+      this.#balance -= amount;
+      console.log(`Withdrew ${amount}. New balance: ${this.#balance}`);
+    }
+  }
+}
+const account = new BankAccount(1000);
+account.deposit(500); // Deposited 500. New balance: 1500
+account.withdraw(200); // Withdrew 200. New balance: 1300
+account.#balance; // Error: Private field '#balance' must be declared in an enclosing class
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>Chaining Methods</h2>
+
+    <ul>
+      <li>
+        Method chaining is a technique where multiple methods can be called on
+        the same object in a single line of code.
+      </li>
+      <li>
+        To enable method chaining, methods need to return the current instance
+        of the class (i.e., `this`). Otherwise, the next method in the chain
+        would be called on `undefined`, resulting in an error.
+      </li>
+      <li>
+        Example:
+        <pre><code>
+class Calculator {
+  constructor(value = 0) {
+    this.value = value;
+  }
+  add(num) {
+    this.value += num;
+    return this; // Return the current instance to enable chaining
+  }
+  subtract(num) {
+    this.value -= num;
+    return this; // Return the current instance to enable chaining
+  }
+  multiply(num) {
+    this.value *= num;
+    return this; // Return the current instance to enable chaining
+  }
+  divide(num) {
+    this.value /= num;
+    return this; // Return the current instance to enable chaining
+  }
+  getResult() {
+    return this.value;
+  }
+}
+const calc = new Calculator();
+const result = calc.add(10).subtract(5).multiply(2).divide(3).getResult();
+console.log(result); // 3.3333333333333335
+        </code></pre>
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <h2>ES6 Class Summary</h2>
+    <ul>
+      <li>Classes are syntactic sugar over constructor functions.</li>
+      <li>Classes use the `class` keyword and have a constructor method.</li>
+      <li>Methods defined in classes are added to the prototype.</li>
+      <li>
+        Inheritance is implemented using the `extends` keyword and `super()`
+        function.
+      </li>
+      <li>
+        Getters and setters can be defined using `get` and `set` keywords.
+      </li>
+      <li>Private fields and methods can be created using the `#` syntax.</li>
+      <li>Method chaining can be achieved by returning `this` from methods.</li>
+    </ul>
+
+    <div class="carousel-container carousel-container--4">
+      <img
+        src="../../00-images/javascript-98.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <br />
+    <br />
   </body>
 </html>
