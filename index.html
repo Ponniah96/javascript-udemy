@@ -55,6 +55,9 @@
           >Object Oriented Programming (OOP) With JavaScript</a
         >
       </li>
+      <li>
+        <a href="#mapty">Mapty App</a>
+      </li>
     </ul>
 
     <!-- <h2>Projects</h2>
@@ -1251,6 +1254,170 @@
         class="carousel-elements"
       />
     </div>
+
+    <h2 id="mapty">Mapty App</h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        Mapty is a workout tracking app that allows users to log their running
+        and cycling workouts on an interactive map.
+      </li>
+      <li>
+        The app uses the Geolocation API to get the user's current location and
+        the Leaflet library to display the map and workout markers.
+      </li>
+      <li>
+        Users can create new workouts by clicking on the map, which opens a form
+        to enter workout details such as type, distance, duration, and cadence
+        or elevation gain.
+      </li>
+      <li>
+        Workouts are stored in local storage, allowing users to persist their
+        workout data across sessions.
+      </li>
+      <li>
+        Project Planning Phase: Planning the structure and features of the Mapty
+        app.
+        <ul>
+          <li>
+            User Stories: It defines the goals and requirements of the app from
+            the user's perspective.
+          </li>
+          <li>
+            Features: It outlines the functionalities and capabilities of the
+            app.
+          </li>
+          <li>
+            Flowcharts: It visualizes the flow and logic of the app's
+            functionality.
+          </li>
+          <li>
+            Architecture: It defines the overall structure and organization of
+            the app.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--13">
+      <img
+        src="./00-images/javascript-99.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-100.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-101.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-102.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-103.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-104.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-105.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-106.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h3>
+      Project 6: Mapty App
+      <a href="../15-Mapty/starter/index.html">Learn More</a>
+    </h3>
+    <p>Important Points</p>
+    <ul>
+      <li>
+        Code defines classes for Workout, Running, Cycling, and App
+        <pre><code>class Workout { ... }</code></pre>
+        <pre><code>class Running extends Workout { ... }</code></pre>
+        <pre><code>class Cycling extends Workout { ... }</code></pre>
+        <pre><code>class App { ... }</code></pre>
+      </li>
+      <li>
+        Use of Leaflet library to create an interactive map and handle map
+        events
+        <pre><code>this.#map = L.map('map').setView(this.#mapEvent.latlng, this.#mapZoomLevel);</code></pre>
+        <pre><code>L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(this.#map);</code></pre>
+        <pre><code>this.#map.on('click', this._showForm.bind(this));</code></pre>
+      </li>
+      <li>
+        Handling form submissions to create new workout instances and render
+        them on the map and in the workout list
+        <pre><code>form.addEventListener('submit', this._newWorkout.bind(this));</code></pre>
+        <pre><code>const workout = new Workout(coords, distance, duration);</code></pre>
+        <pre><code>this._renderWorkoutMarker(workout);</code></pre>
+        <pre><code>this._renderWorkout(workout);</code></pre>
+      </li>
+      <li>
+        Storing and retrieving workout data from local storage to maintain state
+        across sessions
+        <pre><code>localStorage.setItem('workouts', JSON.stringify(this.#workouts));</code></pre>
+        <pre><code>const data = JSON.parse(localStorage.getItem('workouts'));</code></pre>
+      </li>
+      <li>
+        Implementing workout details and map navigation by clicking on workout
+        entries in the list
+        <pre><code>containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));</code></pre>
+        <pre><code>this.#map.setView(workout.coords, this.#mapZoomLevel, { animate: true, pan: { duration: 1 } });</code></pre>
+      </li>
+      <li>
+        Resetting the application by clearing local storage and reloading the
+        page
+        <pre><code>localStorage.removeItem('workouts');</code></pre>
+        <pre><code>location.reload();</code></pre>
+      </li>
+      <li>
+        Important JavaScript concepts and techniques used in the Mapty app:
+        <ol>
+          <li>addEventListener.bind()</li>
+          <li>string.toFixed(), string.slice(1), string[0].toUpperCase()</li>
+          <li>localStorage.setItem() and localStorage.getItem()</li>
+          <li>JSON.stringify() and JSON.parse()</li>
+          <li>guard clauses</li>
+          <li>OOPS concepts over traditional functions</li>
+          <li>private class fields and methods (#map)</li>
+          <li>
+            Web API: navigator, location, localStorage, document,
+            addEventListener
+          </li>
+          <li>
+            validateInput() will replace repetitive input validation logic using
+            every method by calling dom elements as arrays using spread operator
+          </li>
+          <li>Object destructuring and property shorthand</li>
+        </ol>
+      </li>
+    </ul>
 
     <h2>PPT for the entire course</h2>
     <iframe
