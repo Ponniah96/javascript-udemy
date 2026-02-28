@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,24 +7,724 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>Asynchronous JavaScript</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      body {
+        /* height: 100vh; */
+        /* display: flex;
+        align-items: center; */
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: white;
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+      }
+      .buy,
+      .poll {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        /* position: absolute;
+        top: 2rem; */
+      }
+      /* .buy {
+        left: 2rem;
+      }
+      .poll {
+        right: 2rem;
+      } */
+    </style>
   </head>
   <body>
     <main class="container">
-      <div class="countries">
-        <!--
-        <article class="country">
-          <img class="country__img" src="" />
-          <div class="country__data">
-            <h3 class="country__name">COUNTRY</h3>
-            <h4 class="country__region">REGION</h4>
-            <p class="country__row"><span>👫</span>POP people</p>
-            <p class="country__row"><span>🗣️</span>LANG</p>
-            <p class="country__row"><span>💰</span>CUR</p>
-          </div>
-        </article>
-        -->
+      <h1>Asynchronous JavaScript: AJAX, API and Promises</h1>
+      <div style="text-align: left; padding: 16px">
+        <h2>Asynchronous JavaScript</h2>
+        <ul>
+          <li>
+            Asynchronous JavaScript allows us to perform tasks without blocking
+            the main thread, enabling smoother user experiences and better
+            performance.
+          </li>
+          <li>
+            It is essential for handling tasks like fetching data from APIs,
+            timers, and user interactions without freezing the UI.
+          </li>
+          <li>
+            Below are asynchronous functions:
+            <ul>
+              <li>setTimeout()</li>
+              <li>setInterval()</li>
+              <li>img.src (image loading)</li>
+              <li>fetch()</li>
+              <li>XMLHttpRequest</li>
+            </ul>
+          </li>
+          <li>
+            Below are not asynchronous functions:
+            <ul>
+              <li>addEventListener()</li>
+              <li>callback functions</li>
+              <li>console.log()</li>
+              <li>Math.random()</li>
+              <li>Array.prototype.map()</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--1">
+          <img
+            src="../../00-images/javascript-107.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-108.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-109.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-110.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-111.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>AJAX</h2>
+        <ul>
+          <li>
+            AJAX stands for Asynchronous JavaScript and XML. It is a technique
+            for creating fast and dynamic web pages by allowing web pages to
+            update asynchronously by exchanging small amounts of data with the
+            server behind the scenes.
+          </li>
+          <li>
+            This means that it is possible to update parts of a web page,
+            without reloading the whole page.
+          </li>
+          <li>
+            AJAX is not a programming language but a set of web development
+            techniques using many web technologies on the client side to create
+            asynchronous web applications.
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--2">
+          <img
+            src="../../00-images/javascript-112.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>API</h2>
+        <ul>
+          <li>
+            API stands for Application Programming Interface. It is a set of
+            rules and protocols for building and interacting with software
+            applications. An API defines how different software components
+            should interact with each other, allowing them to communicate and
+            share data and functionality.
+          </li>
+          <li>
+            APIs are used to enable the integration of different software
+            systems, allowing them to work together and share data and
+            functionality. They are commonly used in web development to allow
+            different applications to communicate with each other, such as a web
+            application communicating with a server or a mobile app
+            communicating with a backend service.
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--3">
+          <img
+            src="../../00-images/javascript-113.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>How XMLHTTPRequest Works</h2>
+        <ul>
+          <li>
+            The XMLHttpRequest object is used to interact with servers. It can
+            be used to retrieve data from a URL without having to do a full page
+            refresh. This makes it possible to update parts of a web page,
+            without reloading the whole page.
+          </li>
+          <li>
+            The XMLHttpRequest object can be used to send data to a server and
+            receive data from a server asynchronously, without interfering with
+            the display and behavior of the existing page.
+          </li>
+          <pre>
+              <code>
+const request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/name/india");
+request.send();
+request.addEventListener("load",function(){ //Once request is loaded, this function will be called
+  const [data] = JSON.parse(this.responseText);
+  //Similar to const data = JSON.parse(this.responseText)[0];
+  console.log(data);
+})
+              </code>
+            </pre>
+        </ul>
+        <h3>Display Country Details using XMLHttpRequest</h3>
+        <br />
+        <div
+          class="countries countries--1"
+          style="justify-content: center"
+        ></div>
+        <br />
+        <hr />
+        <br />
+
+        <h2>Behind the scenes on when we access server</h2>
+        <ul>
+          <li>
+            DNS: When we enter a URL in the browser, the first step is to
+            resolve the domain name to an IP address using the Domain Name
+            System (DNS). This allows the browser to know where to send the
+            request. The browser sends a DNS query to a DNS server, which
+            responds with the IP address associated with the domain name.
+          </li>
+          <li>
+            HTTP Request: Once the browser has the IP address, it sends an HTTP
+            request to the server. This request includes information such as the
+            method (GET, POST, etc.), headers, and any data that needs to be
+            sent to the server.
+          </li>
+          <li>
+            HTTP Response: The server processes the request and sends back an
+            HTTP response. The response contains the data that we requested,
+            which can be in various formats such as HTML, JSON, XML, etc.
+          </li>
+          <li>
+            Rendering: The browser then takes the response and renders it on the
+            screen, allowing us to see the content that we requested. This
+            process happens asynchronously, meaning that while the browser is
+            waiting for the server to respond, it can still perform other tasks
+            and remain responsive to user interactions.
+          </li>
+          <li>
+            TCP/IP: The browser establishes a connection to the server using the
+            Transmission Control Protocol (TCP) and the Internet Protocol (IP).
+            This ensures reliable data transfer between the client and the
+            server.
+          </li>
+          <li>
+            SSL/TLS: If the website uses HTTPS, the browser and server will
+            establish a secure connection using SSL/TLS protocols. This ensures
+            that the data transmitted between the client and server is encrypted
+            and secure.
+          </li>
+          <li>
+            HTTP vs HTTPS: If the website uses HTTP, the data transmitted
+            between the client and server is not encrypted, which can be a
+            security risk. HTTPS provides an added layer of security by
+            encrypting the data, making it more difficult for attackers to
+            intercept and access sensitive information.
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--4">
+          <img
+            src="../../00-images/javascript-114.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-115.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-116.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-117.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-118.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-119.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-120.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-121.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Callback Hell</h2>
+        <ul>
+          <li>
+            Callback Hell refers to a situation where we have multiple nested
+            callbacks, making the code difficult to read and maintain. It often
+            occurs when we have asynchronous operations that depend on the
+            results of previous operations, leading to deeply nested code
+            structures.
+          </li>
+          <li>
+            This can make the code hard to understand and debug, as it becomes
+            difficult to follow the flow of execution and manage error handling.
+          </li>
+          <li>
+            To avoid callback hell, we can use techniques such as Promises or
+            async/await, which allow us to write asynchronous code in a more
+            readable and maintainable way.
+          </li>
+          <pre>
+              <code>
+setTimeout(() => {
+  console.log("1 second passed");
+  setTimeout(() => {
+    console.log("2 seconds passed");
+    setTimeout(() => {
+      console.log("3 seconds passed");
+      setTimeout(() => { 
+        console.log("4 seconds passed");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
+        </code> 
+            </pre>
+        </ul>
+        <h3>Display Country and Neighbour using Callback Hell</h3>
+        <br />
+        <div
+          class="countries countries--2"
+          style="justify-content: center"
+        ></div>
+        <br />
+        <hr />
+        <br />
+
+        <h2>Promises</h2>
+        <ul>
+          <li>
+            A Promise is an object that represents the eventual completion (or
+            failure) of an asynchronous operation and its resulting value. It
+            allows us to write asynchronous code in a more synchronous and
+            readable manner.
+          </li>
+          <li>
+            Promises avoids callback hell, event handlers, callback functions
+          </li>
+          <li>
+            A Promise can be in one of three states: pending, fulfilled, or
+            rejected.
+          </li>
+          <li>
+            Promise Lifecycle: When a Promise is created, it is in the pending
+            state. It can then either be fulfilled with a value or rejected with
+            a reason (error).
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--5">
+          <img
+            src="../../00-images/javascript-122.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-123.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-124.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-125.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Consuming Promises</h2>
+        <ul>
+          <li>
+            Consuming Promises involves using the .then() and .catch() methods
+            to handle the fulfillment or rejection of a Promise. The .then()
+            method is used to specify what should happen when the Promise is
+            fulfilled, while the .catch() method is used to handle any errors
+            that may occur during the asynchronous operation.
+          </li>
+          <li>
+            When consuming Promises, we can chain multiple .then() calls
+            together to perform a series of asynchronous operations in a more
+            readable way. This allows us to avoid callback hell and write
+            cleaner code.
+          </li>
+          <li>
+            The Fetch API is commonly used to consume Promises when making
+            network requests. It returns a Promise that resolves to the Response
+            object representing the response to the request.
+          </li>
+          <pre>
+              <code>
+fetch("https://restcountries.com/v3.1/name/india")
+  .then(response => response.json()) 
+  .then(data => console.log(data));
+  // response contains readablestream, headers, status, etc. 
+  //We need to call response.json() to get the actual data in JSON format. 
+  //response.json() also returns a Promise. 
+        </code>
+            </pre>
+        </ul>
+        <h3>Display Country Details using Fetch & Promises</h3>
+        <br />
+        <div
+          class="countries countries--3"
+          style="justify-content: center"
+        ></div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Chaining Promises</h2>
+        <ul>
+          <li>
+            Chaining Promises allows us to perform a sequence of asynchronous
+            operations in a more readable and maintainable way. We can chain
+            multiple .then() calls together, where each .then() returns a new
+            Promise that resolves to the result of the previous .then() call.
+          </li>
+          <li>
+            This allows us to avoid callback hell and write cleaner code when
+            dealing with multiple asynchronous operations that depend on each
+            other.
+          </li>
+          <li>
+            When chaining Promises, we can also use the .catch() method at the
+            end of the chain to handle any errors that may occur during any of
+            the asynchronous operations in the chain.
+          </li>
+          <pre>
+              <code>
+fetch("https://restcountries.com/v3.1/name/india")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    const neighbour = data[0].borders?.[0];
+    if (!neighbour) throw new Error("No neighbour found!");
+    return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+  })
+  .then(response => response.json())
+  .then(data => console.log(data));
+        </code>
+            </pre>
+        </ul>
+        <h3>Display Country Details using Fetch & Chain of Promise methods</h3>
+        <br />
+        <div
+          class="countries countries--4"
+          style="justify-content: center"
+        ></div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Handling Errors in Promises (Catch and throw new Error())</h2>
+        <ul>
+          <li>
+            Handling errors in Promises is crucial to ensure that our
+            application can gracefully handle any issues that may arise during
+            asynchronous operations.
+          </li>
+          <li>
+            We can use the .catch() method to handle any errors (e.g., network
+            issues, invalid responses, user manually entering incorrect data)
+            that may occur during the execution of a Promise chain.
+          </li>
+          <li>
+            Default: The .catch() method will catch any errors that occur in any
+            of the preceding .then() calls and allow us to handle them
+            appropriately, such as by logging the error or displaying a
+            user-friendly message.
+          </li>
+          <li>
+            Throwing new Error: We can also throw new errors within our .then()
+            calls to create custom error messages or to handle specific error
+            conditions. When we throw a new error, it will be caught by the
+            nearest .catch() method in the Promise chain, allowing us to handle
+            it accordingly.
+          </li>
+          <pre>
+              <code>
+const getCountryDataWithErrorHandling = function (country) {
+fetch(`https://restcountries.com/v3.1/name/${country}`)
+  .then(response => response.json())
+  .then(data =>
+    renderHTML(data[0], ',', document.querySelector('.countries--4')),
+  )
+  .catch(err => console.error(`${err} 💥💥💥`))
+  .finally(() => (document.querySelector('.countries--4').style.opacity = 1));
+};
+            </code>
+          </pre>
+        </ul>
+        <div
+          class="countries countries--5"
+          style="justify-content: center"
+        ></div>
+        <button class="btn-country" style="text-align: center">
+          Where am I?
+        </button>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Coding Challenge #1</h2>
+        <ul>
+          <li>
+            In this challenge, you will get country name using latitude and
+            longitude cordinates.
+          </li>
+          <li>
+            You will use the geocoding API to get the country name from the
+            coordinates, and then use the country API to get the details of the
+            country and its neighbour (if it exists).
+          </li>
+          <li>
+            Pass the country name to the renderHTML function to display the
+            country details on the page. You can use the same function that you
+            created in previous sections to render the country details.
+          </li>
+        </ul>
+        <div
+          class="countries countries--6"
+          style="justify-content: center"
+        ></div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Behind the Scenes of Asynchronous JavaScript</h2>
+        <ul>
+          <li>
+            The JavaScript runtime environment is single-threaded, meaning that
+            it can only execute one piece of code at a time. However, it uses an
+            event loop and a callback queue to handle asynchronous operations.
+          </li>
+          <li>
+            Runtime environment consists of the call stack, Web APIs, and the
+            callback queue.
+          </li>
+          <li>
+            Callback queue is a queue of callback functions that are waiting to
+            be executed.
+          </li>
+          <li>
+            Call stack is a stack data structure that keeps track of function
+            calls.
+          </li>
+          <li>
+            Web APIs are browser-provided APIs that handle asynchronous
+            operations. Eg: XMLHttpRequest, Fetch API, Timers, DOM API
+          </li>
+          <li>
+            Event loop is a mechanism that continuously checks the call stack
+            and the callback queue.
+          </li>
+          <li>
+            When an asynchronous function is called, It executed in Web API
+            environment. Once it is complete, the callback function is added to
+            the callback queue.
+          </li>
+          <li>
+            But in promise, the callback is added to the microtask queue instead
+            of the callback queue, which has higher priority and is executed
+            before the callback queue.
+          </li>
+          <li>
+            When the call stack is empty, the event loop pushes the first
+            callback from the callback queue onto the call stack for execution.
+          </li>
+          <li>
+            This allows asynchronous operations to be handled without blocking
+            the main thread, enabling a responsive user experience.
+          </li>
+        </ul>
+        <div class="carousel-container carousel-container--6">
+          <img
+            src="../../00-images/javascript-126.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-127.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-128.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-129.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-130.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-131.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-132.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-133.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-134.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+          <img
+            src="../../00-images/javascript-135.png"
+            alt=""
+            srcset=""
+            class="carousel-elements"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Event Loop</h2>
+        <ul>
+          <li>
+            The event loop is a fundamental concept in JavaScript that allows
+            for asynchronous programming. It is responsible for managing the
+            execution of code, handling events, and ensuring that the main
+            thread remains responsive.
+          </li>
+          <li>
+            The event loop continuously checks the call stack and the callback
+            queue. If the call stack is empty, it takes the first callback from
+            the callback queue and pushes it onto the call stack for execution.
+          </li>
+          <li>
+            This mechanism allows JavaScript to handle asynchronous operations
+            without blocking the main thread, enabling a responsive user
+            experience. It ensures that even when there are long-running tasks
+            or network requests, the user interface remains interactive and does
+            not freeze.
+          </li>
+          <pre>
+              <code>
+console.log('Test start'); 
+// Execute 1
+setTimeout(() => console.log('0 sec timer'), 0); 
+//Execute 5 after 0 milliseconds, 
+//but it is in callback queue and will be executed after call stack and microstackis empty.
+Promise.resolve('Resolved Promise 1').then(res => console.log(res)); 
+//Execute 3 becuase of microtask queue higher priority than callback queue
+Promise.resolve('Resolved Promise 2').then(res => {
+  for (let i = 0; i < 100000; i++) {} // Simulate a long-running task
+  console.log(res); 
+  // Execute 4 after the long-running task is complete
+});
+console.log('Test end'); 
+// Execute 2
+              </code>
+            </pre>
+        </ul>
       </div>
-      <!-- <button class="btn-country">Where am I?</button> -->
       <div class="images"></div>
     </main>
   </body>

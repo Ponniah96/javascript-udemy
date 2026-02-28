@@ -424,3 +424,5 @@ const app = new App();
 // 6. Local storage is used to persist workout data across sessions, and there is a reset method to clear the stored workouts.
 // Note: The code includes comments and console logs for debugging purposes, which can be removed in a production environment.
 // End of code
+
+//

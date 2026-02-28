@@ -43,6 +43,7 @@ body {
   border-radius: 0.7rem;
   margin: 0 3rem;
   /* overflow: hidden; */
+  color: #555;
 }
 
 .neighbour::before {
@@ -55,7 +56,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #888;
+  color: #fff;
 }
 
 .neighbour {
