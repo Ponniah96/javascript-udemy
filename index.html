@@ -61,6 +61,29 @@
       <li>
         <a href="#asynchronous-javascript">Asynchronous JavaScript</a>
       </li>
+      <li>
+        <a href="#javascript-modules-and-tooling"
+          >JavaScript Modules and Tooling</a
+        >
+      </li>
+      <li>
+        <a href="#forkify-project">Forkify Project</a>
+      </li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#guess-my-number">Guess My Number</a></li>
+      <li><a href="#modal-window">Modal Window</a></li>
+      <li><a href="#pig-game">Pig Game</a></li>
+      <li>
+        <a href="./11-Arrays-Bankist/starter/index.html"
+          >Bankist App (Functional)</a
+        >
+      </li>
+      <li><a href="#bankist-app">Bankist App (UI)</a></li>
+      <li><a href="#mapty-app">Mapty App</a></li>
+      <li><a href="#forkify-project">Forkify</a></li>
     </ul>
 
     <!-- <h2>Projects</h2>
@@ -501,7 +524,7 @@
       />
     </div>
 
-    <h3>
+    <h3 id="guess-my-number">
       Project 1: Guess My Number
       <a href="./05-Guess-My-Number/starter/index.html">Learn More</a>
     </h3>
@@ -520,7 +543,7 @@
       </li>
     </ul>
 
-    <h3>
+    <h3 id="modal-window">
       Project 2: Modal Window
       <a href="./06-Modal/starter/index.html">Learn More</a>
     </h3>
@@ -529,7 +552,7 @@
       <li>Difference between querySelector and getElementByClassName</li>
     </ul>
 
-    <h3>
+    <h3 id="pig-game">
       Project 3: Pig Game
       <a href="./07-Pig-Game/starter/index.html">Learn More</a>
     </h3>
@@ -1049,7 +1072,7 @@
       />
     </div>
 
-    <h3>
+    <h3 id="bankist-app">
       Project 5: Bankist App
       <a href="./13-Advanced-DOM-Bankist/starter/index.html">Learn More</a>
     </h3>
@@ -1353,7 +1376,7 @@
       />
     </div>
 
-    <h3>
+    <h3 id="mapty-app">
       Project 6: Mapty App
       <a href="../15-Mapty/starter/index.html">Learn More</a>
     </h3>
@@ -1370,7 +1393,8 @@
         Use of Leaflet library to create an interactive map and handle map
         events
         <pre><code>this.#map = L.map('map').setView(this.#mapEvent.latlng, this.#mapZoomLevel);</code></pre>
-        <pre><code>L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(this.#map);</code></pre>
+        <pre><code>L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 
+          { attribution: '&copy; OpenStreetMap contributors' }).addTo(this.#map);</code></pre>
         <pre><code>this.#map.on('click', this._showForm.bind(this));</code></pre>
       </li>
       <li>
@@ -1552,6 +1576,420 @@
         class="carousel-elements"
       />
     </div>
+
+    <h2 id="javascript-modules-and-tooling">
+      JavaScript Modules and Tooling
+      <a href="../17-Modern-JS-Modules-Tooling/starter/index.html"
+        >Learn More</a
+      >
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        JavaScript modules are reusable pieces of code that can be imported and
+        exported between different files in a JavaScript application.
+      </li>
+      <li>
+        Modules help organize code, avoid naming conflicts, and make code more
+        maintainable and reusable.
+      </li>
+      <li>
+        The build process involves compiling, minifying, and optimizing
+        JavaScript code for production use.
+      </li>
+      <li>
+        NPM is a tool that allows developers to manage and share JavaScript
+        packages.
+      </li>
+      <li>
+        Webpack and Parcel are popular build tools that help automate and
+        optimize JavaScript development workflows.
+      </li>
+      <li>
+        ES6 introduced a standardized module system that allows developers to
+        define and use modules in a consistent way across different JavaScript
+        environments.
+      </li>
+      <li>
+        Importing creates a live connection to the exported value. So if the
+        value changes in the exporting module, the imported value also changes.
+      </li>
+      <li>
+        Top-level await allows us to use the await keyword outside of an async
+        function, at the top level of a module.
+      </li>
+      <li>
+        The module pattern is a design pattern that allows us to create modules
+        in JavaScript using an IIFE (Immediately Invoked Function Expression).
+      </li>
+      <li>
+        CommonJS is a module system used in Node.js that allows developers to
+        create and use modules in a way that is similar to ES6 modules, but with
+        some differences in syntax and behavior.
+      </li>
+      <li>
+        AMD (Asynchronous Module Definition) is a module system that allows
+        developers to define and use modules in a way that is optimized for
+        asynchronous loading in the browser.
+      </li>
+      <li>
+        Basic terminal commands include ls (list files), cd (change directory),
+        mkdir (make directory), rm (remove files), and touch (create a new
+        file).
+      </li>
+      <li>
+        NPM allows you to manage dependencies for your project, ensuring that
+        all required packages are installed and up to date.
+      </li>
+      <li>
+        Babel is a JavaScript transpiler that allows developers to write modern
+        JavaScript code and have it transpiled into a version of JavaScript that
+        is compatible with older browsers and environments.
+      </li>
+      <li>
+        Best practices for modern and clean code include using meaningful
+        variable and function names, keeping functions small and focused,
+        avoiding global variables, and using comments to explain complex code.
+      </li>
+      <li>
+        Imperative programming focuses on describing how a program should
+        achieve a specific task, while declarative programming focuses on
+        describing what a program should accomplish rather than how it should
+        achieve it.
+      </li>
+      <li>
+        Declarative programming aims to minimize side effects, emphasizes
+        immutability and pure functions, and often makes use of array and object
+        destructuring, template literals, arrow functions, and the spread
+        operator.
+      </li>
+    </ul>
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--15">
+      <img
+        src="./00-images/javascript-137.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-139.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-140.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-142.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-143.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-144.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+
+    <h2 id="forkify-project">
+      Project 7: Forkify App (Final Project - Run NPM Start)
+      <a href="./18-forkify/final/index.html">Learn More</a>
+    </h2>
+    <h3>Section Overview</h3>
+    <ul>
+      <li>
+        Forkify is a recipe search and management app that allows users to
+        search for recipes, view recipe details, and manage their favorite
+        recipes.
+      </li>
+      <li>
+        The app uses the Forkify API to fetch recipe data and allows users to
+        bookmark their favorite recipes for easy access.
+      </li>
+      <li>
+        Users can also add their own recipes to the app, which are stored in
+        local storage for persistence across sessions.
+      </li>
+      <li>
+        Project Planning Phase: Planning the structure and features of the
+        Forkify app.
+        <ul>
+          <li>
+            User Stories: It defines the goals and requirements of the app from
+            the user's perspective.
+          </li>
+          <li>
+            Features: It outlines the functionalities and capabilities of the
+            app.
+          </li>
+          <li>
+            Flowcharts: It visualizes the flow and logic of the app's
+            functionality.
+          </li>
+          <li>
+            Architecture: It defines the overall structure and organization of
+            the app.
+          </li>
+        </ul>
+      </li>
+      <li>
+        MVC Architecture
+        <ul>
+          <li>
+            MVC (Model-View-Controller) is a software architectural pattern that
+            separates an application into three main components: Model, View,
+            and Controller.
+          </li>
+          <li>
+            Why we use need architechture:
+            <ol>
+              <li>
+                Organization: It provides a clear structure for organizing code
+                and separating concerns.
+              </li>
+              <li>
+                Maintainability: It makes it easier to maintain and update the
+                codebase by isolating different parts of the application.
+              </li>
+              <li>
+                Reusability: It allows for the reuse of components across
+                different parts of the application.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Definition:
+            <ol>
+              <li>
+                Model: Manages the data and business logic of the application.
+              </li>
+              <li>
+                View: Handles the presentation and user interface of the
+                application.
+              </li>
+              <li>
+                Controller: Acts as an intermediary between the Model and View,
+                handling user input and updating the Model and View accordingly.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Components of Architechture:
+            <ol>
+              <li>
+                Business Logic: Handles the core functionality and rules of the
+                application.
+              </li>
+              <li>
+                State Management: Manages the state of the application,
+                including data and user interactions.
+              </li>
+              <li>
+                HTTP Requests: Manages the communication with external APIs and
+                servers.
+              </li>
+              <li>
+                Application Logic: Handles the overall flow and coordination of
+                the application.
+              </li>
+              <li>
+                Presentation: Manages the user interface and user experience
+                aspects of the application.
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      <li>
+        MVC Event Handlers: Publisher - Subscriber Pattern
+        <ul>
+          <li>
+            Publisher - Subscriber Pattern is a design pattern that allows
+            components to communicate with each other without being tightly
+            coupled. In this pattern, the publisher component emits events, and
+            the subscriber component listens for those events and reacts
+            accordingly.
+          </li>
+          <li>
+            In the context of the Forkify app, the Controller acts as the
+            publisher, emitting events when user interactions occur (e.g.,
+            searching for a recipe, bookmarking a recipe). The Model and View
+            act as subscribers, listening for these events and updating the
+            application state and user interface accordingly.
+          </li>
+        </ul>
+      </li>
+      <li>
+        JSDOC Comments:
+        <ul>
+          <li>
+            JSDoc is a documentation generator for JavaScript that allows
+            developers to add comments to their code in a standardized format.
+          </li>
+          <li>
+            It helps improve code readability and maintainability by providing
+            clear documentation for functions, methods, and other code elements
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Important Video & Screenshots</h3>
+    <div class="carousel-container carousel-container--16">
+      <img
+        src="./00-images/javascript-149.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-150.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-151.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-152.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-153.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-154.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-155.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-156.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-157.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-158.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+      <img
+        src="./00-images/javascript-159.png"
+        alt=""
+        srcset=""
+        class="carousel-elements"
+      />
+    </div>
+    <h2>Important points</h2>
+    <ul>
+      <li>
+        Create MVC Architecture to make application robust, maintainable and
+        scalable.
+        <ol>
+          <li>
+            Controller: Handles events and communication between Model and View.
+          </li>
+          <li>
+            Model: Manages the data and business logic of the application.
+          </li>
+          <li>
+            View: Manages the presentation and user interface of the
+            application.
+          </li>
+          <li>
+            Helper: Provides utility functions to support the application (API
+            Calls, Timeout functionality, etc.)
+          </li>
+          <li>
+            Config: Stores configuration settings and constants for the
+            application.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Fetch a recipe from the API and render it in the UI when a user selects
+        a recipe from the side menu. Use hashchange and load events to handle
+        this functionality.
+      </li>
+      <li>
+        Implement search functionality to allow users to search for recipes
+        based on a query and render the search results in the UI.
+      </li>
+      <li>
+        Implement pagination functionality for search results to allow users to
+        navigate through multiple pages of search results.
+      </li>
+      <li>
+        Implement update recipe servings functionality to allow users to adjust
+        the number of servings for a recipe and update the ingredient quantities
+        accordingly.
+      </li>
+      <li>
+        Implement bookmark functionality to allow users to bookmark their
+        favorite recipes and view them in a separate bookmarks view.
+      </li>
+      <li>
+        Implement preview views for both bookmarks and search results to avoid
+        code duplication and keep the code maintainable.
+      </li>
+      <li>
+        Implement local storage to store the bookmarks so that they persist even
+        after the page is refreshed.
+      </li>
+      <li>
+        Create add recipe functionality to allow users to add their own recipes
+        to the application and have them rendered in the UI.
+      </li>
+      <li>
+        Upload new recipe into the API and render it in the UI after it is
+        added.
+      </li>
+      <li>
+        Final wrap up considerations including implementing JSDOC comments for
+        all functions and methods, implementing pagination to display all the
+        page numbers, and implementing sorting functionality to sort the search
+        results based on different criteria like cooking time, popularity, etc.
+      </li>
+      <li>
+        Important URL's: https://forkify-api.jonas.io/, https://jsdoc.app/,
+        https://spoonacular.com/food-api
+      </li>
+    </ul>
 
     <h2>PPT for the entire course</h2>
     <iframe

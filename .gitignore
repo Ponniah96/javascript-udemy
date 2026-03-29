@@ -1,0 +1,13 @@
+ i want to add all the nodemodules, parcel-cache, dist folders to the .gitignore file. Please add the following lines to your .gitignore file:
+
+# Ignore node_modules
+node_modules/
+
+# Ignore Parcel cache
+.parcel-cache/
+
+# Ignore dist folder
+dist/
+
+# Ignore DS_Store files (for macOS)
+.DS_Store
